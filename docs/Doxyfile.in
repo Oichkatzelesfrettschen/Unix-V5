@@ -1,0 +1,38 @@
+PROJECT_NAME           = "Unix Version 5"
+PROJECT_NUMBER         = "1.0.0"
+PROJECT_BRIEF          = "Historical Unix V5 Source Code with Modern Build System"
+
+OUTPUT_DIRECTORY       = @CMAKE_BINARY_DIR@/docs
+INPUT                  = @CMAKE_SOURCE_DIR@/usr
+RECURSIVE              = YES
+FILE_PATTERNS          = *.c *.h *.s
+
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+
+GENERATE_HTML          = YES
+HTML_OUTPUT            = html
+HTML_FILE_EXTENSION    = .html
+
+GENERATE_LATEX         = NO
+
+HAVE_DOT               = YES
+CALL_GRAPH             = YES
+CALLER_GRAPH           = YES
+
+WARNINGS               = YES
+WARN_IF_UNDOCUMENTED   = NO
+WARN_IF_DOC_ERROR      = YES
+
+OPTIMIZE_OUTPUT_FOR_C  = YES
+TYPEDEF_HIDES_STRUCT   = YES
+
+SOURCE_BROWSER         = YES
+INLINE_SOURCES         = YES
+
+PREDEFINED             = "KERNEL=1" \
+                         "UNIX_V5=1"
+
+EXCLUDE_PATTERNS       = */build/* \
+                         */.git/*

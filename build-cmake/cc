@@ -1,0 +1,210 @@
+#!/bin/bash
+# Unix V5 C Compiler Wrapper Script
+# This script emulates the original cc command using the three-pass compiler
+
+set -e
+
+COMPILER_DIR="/usr/local/lib/unix-v5"
+TEMP_DIR="${TMPDIR:-/tmp}"
+BASENAME="$$"
+DEBUG=0
+OPTIMIZE=0
+OUTPUT=""
+SOURCES=()
+OBJECTS=()
+LIBS=()
+
+# Default library paths
+LIB_PATHS=("/usr/local/lib")
+
+usage() {
+    cat << EOF
+Unix V5 C Compiler (cc) - Modern Build System Implementation
+
+Usage: cc [options] file...
+
+Options:
+    -c          Compile only, do not link
+    -o file     Place output in file
+    -O          Enable optimization
+    -g          Include debugging information
+    -l library  Link with library
+    -L dir      Add library search directory
+    -I dir      Add include directory
+    -D macro    Define preprocessor macro
+    -v          Verbose output
+    -h          Show this help
+
+This wrapper provides a modern interface to the original Unix V5 three-pass
+C compiler (c0, c1, c2) with optional optimization (cvopt).
+
+Examples:
+    cc hello.c -o hello
+    cc -c module.c
+    cc main.c lib.c -o program
+EOF
+}
+
+log() {
+    if [ "$DEBUG" -eq 1 ]; then
+        echo "[cc] $*" >&2
+    fi
+}
+
+error() {
+    echo "cc: error: $*" >&2
+    exit 1
+}
+
+# Parse command line arguments
+COMPILE_ONLY=0
+while [ $# -gt 0 ]; do
+    case "$1" in
+        -c)
+            COMPILE_ONLY=1
+            ;;
+        -o)
+            shift
+            OUTPUT="$1"
+            ;;
+        -O)
+            OPTIMIZE=1
+            ;;
+        -g)
+            DEBUG=1
+            ;;
+        -l*)
+            LIB=$(echo "$1" | sed 's/^-l//')
+            LIBS+=("$LIB")
+            ;;
+        -L*)
+            LIBDIR=$(echo "$1" | sed 's/^-L//')
+            LIB_PATHS+=("$LIBDIR")
+            ;;
+        -I*)
+            # Include directories would need preprocessor support
+            log "Include directory $1 noted (preprocessor not implemented)"
+            ;;
+        -D*)
+            # Macro definitions would need preprocessor support
+            log "Macro definition $1 noted (preprocessor not implemented)"
+            ;;
+        -v)
+            DEBUG=1
+            ;;
+        -h|--help)
+            usage
+            exit 0
+            ;;
+        -*)
+            error "unknown option: $1"
+            ;;
+        *.c)
+            SOURCES+=("$1")
+            ;;
+        *.o)
+            OBJECTS+=("$1")
+            ;;
+        *)
+            error "unknown file type: $1"
+            ;;
+    esac
+    shift
+done
+
+# Check if we have any sources to compile
+if [ ${#SOURCES[@]} -eq 0 ] && [ ${#OBJECTS[@]} -eq 0 ]; then
+    error "no input files"
+fi
+
+# Check if compiler components exist
+for PHASE in c0 c1 c2; do
+    if [ ! -x "$COMPILER_DIR/$PHASE" ]; then
+        error "compiler phase $PHASE not found in $COMPILER_DIR"
+    fi
+done
+
+if [ "$OPTIMIZE" -eq 1 ] && [ ! -x "$COMPILER_DIR/cvopt" ]; then
+    error "optimizer cvopt not found in $COMPILER_DIR"
+fi
+
+# Compile each source file
+COMPILED_OBJECTS=()
+for SOURCE in "${SOURCES[@]}"; do
+    log "Compiling $SOURCE"
+    
+    BASE=$(basename "$SOURCE" .c)
+    TEMP_BASE="$TEMP_DIR/cc_${BASENAME}_${BASE}"
+    
+    # Pass 1: c0 (lexical analysis and parsing)
+    log "Phase 1: $COMPILER_DIR/c0 < $SOURCE > ${TEMP_BASE}.i"
+    if ! "$COMPILER_DIR/c0" < "$SOURCE" > "${TEMP_BASE}.i"; then
+        error "compilation failed in phase 1 for $SOURCE"
+    fi
+    
+    # Pass 2: c1 (intermediate code generation)  
+    log "Phase 2: $COMPILER_DIR/c1 < ${TEMP_BASE}.i > ${TEMP_BASE}.s"
+    if ! "$COMPILER_DIR/c1" < "${TEMP_BASE}.i" > "${TEMP_BASE}.s"; then
+        rm -f "${TEMP_BASE}.i"
+        error "compilation failed in phase 2 for $SOURCE"
+    fi
+    
+    # Optimization pass (optional)
+    if [ "$OPTIMIZE" -eq 1 ]; then
+        log "Optimization: $COMPILER_DIR/cvopt < ${TEMP_BASE}.s > ${TEMP_BASE}_opt.s"
+        if "$COMPILER_DIR/cvopt" < "${TEMP_BASE}.s" > "${TEMP_BASE}_opt.s"; then
+            mv "${TEMP_BASE}_opt.s" "${TEMP_BASE}.s"
+        else
+            log "optimization failed, continuing with unoptimized code"
+        fi
+    fi
+    
+    # Pass 3: c2 (code generation and assembly)
+    if [ "$COMPILE_ONLY" -eq 1 ]; then
+        OUTPUT_OBJ="${OUTPUT:-${BASE}.o}"
+    else
+        OUTPUT_OBJ="${TEMP_BASE}.o"
+        COMPILED_OBJECTS+=("$OUTPUT_OBJ")
+    fi
+    
+    log "Phase 3: $COMPILER_DIR/c2 < ${TEMP_BASE}.s > $OUTPUT_OBJ"
+    if ! "$COMPILER_DIR/c2" < "${TEMP_BASE}.s" > "$OUTPUT_OBJ"; then
+        rm -f "${TEMP_BASE}.i" "${TEMP_BASE}.s"
+        error "compilation failed in phase 3 for $SOURCE"
+    fi
+    
+    # Clean up intermediate files
+    rm -f "${TEMP_BASE}.i" "${TEMP_BASE}.s"
+    
+    log "Successfully compiled $SOURCE to $OUTPUT_OBJ"
+done
+
+# Link phase (if not compile-only)
+if [ "$COMPILE_ONLY" -eq 0 ]; then
+    ALL_OBJECTS=("${COMPILED_OBJECTS[@]}" "${OBJECTS[@]}")
+    
+    if [ ${#ALL_OBJECTS[@]} -eq 0 ]; then
+        error "no object files to link"
+    fi
+    
+    OUTPUT_BIN="${OUTPUT:-a.out}"
+    
+    # Simple linking (in reality, Unix V5 would use ld)
+    log "Linking: ld -o $OUTPUT_BIN ${ALL_OBJECTS[*]}"
+    
+    # Try to use modern linker for now
+    if command -v ld >/dev/null 2>&1; then
+        ld -o "$OUTPUT_BIN" "${ALL_OBJECTS[@]}" || error "linking failed"
+    else
+        error "linker not available"
+    fi
+    
+    # Clean up compiled object files
+    for OBJ in "${COMPILED_OBJECTS[@]}"; do
+        rm -f "$OBJ"
+    done
+    
+    log "Successfully created $OUTPUT_BIN"
+fi
+
+log "Compilation completed successfully"

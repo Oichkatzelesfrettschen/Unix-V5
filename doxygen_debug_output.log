@@ -1,0 +1,46 @@
+error: option "-d" has unknown debug specifier: "All".
+Developer parameters:
+  -m          dump symbol map
+  -b          making messages output unbuffered
+  -t [<file|stdout|stderr>] trace debug info to file, stdout, or stderr (default file stdout)
+  -T          activates output generation via Django like template
+  -d <level>  enable a debug level, such as (multiple invocations of -d are possible):
+	alias
+	cite
+	commentcnv
+	commentscan
+	entries
+	extcmd
+	filteroutput
+	formula
+	fortranfixed2free
+	lex
+	lex:code
+	lex:commentcnv
+	lex:commentscan
+	lex:configimpl
+	lex:constexp
+	lex:declinfo
+	lex:defargs
+	lex:doctokenizer
+	lex:fortrancode
+	lex:fortranscanner
+	lex:lexcode
+	lex:lexscanner
+	lex:pre
+	lex:pycode
+	lex:pyscanner
+	lex:scanner
+	lex:sqlcode
+	lex:vhdlcode
+	lex:xml
+	lex:xmlcode
+	markdown
+	nolineno
+	plantuml
+	preprocessor
+	printtree
+	qhp
+	rtf
+	tag
+	time

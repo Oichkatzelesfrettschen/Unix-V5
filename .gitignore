@@ -1,0 +1,84 @@
+# CMake related
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+compile_commands.json
+Makefile
+*.cbp # CodeBlocks project file
+*.cmake # User specific cmake files
+*.codelite # CodeLite project file
+*.kdev4 # KDevelop project file
+*.sublime-project # Sublime Text project file
+*.sublime-workspace # Sublime Text workspace file
+*.vscode/ # VSCode settings
+
+# Build output directories
+build/
+build-*/
+Build/
+bin/
+lib/
+*.o
+*.a
+*.so
+*.dylib
+*.dll
+*.exe
+*.out
+
+# Doxygen output
+doxygen_output/
+Doxyfile.bak
+doxygen_warnings.log
+
+# Sphinx output
+docs/_build/
+docs/build/ # If sphinx output is configured here by mistake
+
+# Python virtual environment
+.venv/
+venv/
+ENV/
+env/
+*.pyc
+__pycache__/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor backup files
+*~
+*.swp
+*.swo
+*.bak
+
+# IDE specific files
+.idea/ # JetBrains IDEs
+*.iml # IntelliJ modules
+nbproject/ # NetBeans
+*.sln # Visual Studio Solution
+*.suo # Visual Studio Solution User Options
+*.user # Visual Studio User specific
+*.vcxproj # Visual Studio C++ project
+*.vcxproj.filters # Visual Studio C++ project filters
+*.vcxproj.user # Visual Studio C++ project user file
+
+# Tarballs / Compressed files (unless explicitly versioned)
+*.tar.gz
+*.zip
+*.rar
+
+# Specific to this project if they are outputs
+cal # Example executable from previous steps
+v5root.tar.gz # This is source, but large. Consider if it should be git LFS or not checked in if extracted.
+              # For now, keeping it as it was in the original ls. If it's to be extracted, exclude the extracted dir.
+
+# If Unix v5 source is extracted from v5root.tar.gz into a specific directory
+# and that dir is not the primary working tree, exclude it.
+# Example: extracted_v5_source/

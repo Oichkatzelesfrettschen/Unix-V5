@@ -1,0 +1,13 @@
+# ninja log v5
+7	560	0	usr/sys/CMakeFiles/kernel-analysis	15f7f02bef699a05
+7	560	0	/workspaces/Unix-V5/build-cmake/usr/sys/CMakeFiles/kernel-analysis	15f7f02bef699a05
+10	698	0	usr/source/CMakeFiles/userland-analysis	c6f9d9d5099d0d34
+10	698	0	/workspaces/Unix-V5/build-cmake/usr/source/CMakeFiles/userland-analysis	c6f9d9d5099d0d34
+701	1940	0	CMakeFiles/cppcheck	b4fa1027e009e560
+701	1940	0	/workspaces/Unix-V5/build-cmake/CMakeFiles/cppcheck	b4fa1027e009e560
+9	554	0	usr/sys/CMakeFiles/kernel-analysis	15f7f02bef699a05
+9	554	0	/workspaces/Unix-V5/build-cmake/usr/sys/CMakeFiles/kernel-analysis	15f7f02bef699a05
+12	706	0	usr/source/CMakeFiles/userland-analysis	c6f9d9d5099d0d34
+12	706	0	/workspaces/Unix-V5/build-cmake/usr/source/CMakeFiles/userland-analysis	c6f9d9d5099d0d34
+709	1968	0	CMakeFiles/cppcheck	b4fa1027e009e560
+709	1968	0	/workspaces/Unix-V5/build-cmake/CMakeFiles/cppcheck	b4fa1027e009e560

@@ -1,0 +1,7 @@
+option('kernel', type : 'boolean', value : true, description : 'Build Unix V5 kernel')
+option('userland', type : 'boolean', value : true, description : 'Build Unix V5 userland programs')
+option('compiler', type : 'boolean', value : true, description : 'Build Unix V5 C compiler')
+option('use_clang', type : 'boolean', value : true, description : 'Use Clang/LLVM toolchain')
+option('coverage', type : 'boolean', value : false, description : 'Enable code coverage analysis')
+option('analysis', type : 'boolean', value : false, description : 'Enable static analysis tools')
+option('docs', type : 'boolean', value : false, description : 'Build documentation')

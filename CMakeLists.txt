@@ -1,103 +1,128 @@
-cmake_minimum_required(VERSION 3.10)
-project(UnixV5_Modernized C)
+cmake_minimum_required(VERSION 3.20)
+project(UnixV5_Modernized
+    VERSION 1.0
+    DESCRIPTION "Modernized Build System for Unix V5 Port"
+    LANGUAGES C ASM
+)
 
+#------------------------------------------------------------------------------
+# 1. Build Configuration Options
+#------------------------------------------------------------------------------
+option(BUILD_KERNEL       "Build the Unix V5 kernel"                ON)
+option(BUILD_USERLAND     "Build Unix V5 userland programs"         ON)
+option(BUILD_COMPILER     "Build the Unix V5 C compiler"            ON)
+option(USE_CLANG          "Use Clang/LLVM toolchain"                ON)
+option(ENABLE_COVERAGE    "Enable code coverage analysis"           OFF)
+option(ENABLE_ANALYSIS    "Enable static analysis tools"           OFF)
+option(ENABLE_DOCUMENTATION "Build documentation (Doxygen & Sphinx)" OFF)
+
+if(USE_CLANG)
+    find_program(CLANG_EXE clang REQUIRED)
+    set(CMAKE_C_COMPILER   ${CLANG_EXE})
+    set(CMAKE_ASM_COMPILER ${CLANG_EXE})
+    find_program(LLD_EXE lld REQUIRED)
+    set(CMAKE_LINKER       ${LLD_EXE})
+endif()
+
+#------------------------------------------------------------------------------
+# 2. Compiler Flags
+#------------------------------------------------------------------------------
 set(CMAKE_C_STANDARD 99)
-set(CMAKE_C_STANDARD_REQUIRED True)
+set(CMAKE_C_STANDARD_REQUIRED ON)
+add_compile_options(-Wall -Wextra -Wno-strict-aliasing -Wno-implicit-function-declaration -Wno-incompatible-pointer-types)
 
-# Set default build type if none is specified
-if(NOT CMAKE_BUILD_TYPE)
-  set(CMAKE_BUILD_TYPE Release)
+# Debug/Release flags
+set(CMAKE_C_FLAGS_DEBUG       "-g -O0 -DDEBUG")
+set(CMAKE_C_FLAGS_RELEASE     "-O2 -DNDEBUG")
+set(CMAKE_C_FLAGS_RELWITHDEBINFO "-O2 -g -DNDEBUG")
+
+# Coverage
+if(ENABLE_COVERAGE)
+    add_compile_options(--coverage -fprofile-arcs -ftest-coverage)
+    set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} --coverage")
 endif()
 
-# Compiler specific flags for x86_64, MMX, SSE (using Clang)
-if(CMAKE_C_COMPILER_ID MATCHES "Clang")
-  add_compile_options(-target x86_64-unknown-linux-gnu)
-  add_compile_options(-mmmx)
-  add_compile_options(-msse)
-  # Add other warning flags or architecture specific flags as needed
-  add_compile_options(-Wall -Wextra -pedantic)
+# Analysis
+if(ENABLE_ANALYSIS)
+    find_program(CPPCHECK cppcheck)
+    if(CPPCHECK)
+        add_custom_target(cppcheck
+            COMMAND ${CPPCHECK} --enable=all --std=c99 --platform=unix32 --suppress=missingIncludeSystem --quiet ${CMAKE_SOURCE_DIR}/usr
+            COMMENT "Running Cppcheck static analysis"
+        )
+    endif()
+    find_program(LIZARD lizard)
+    if(LIZARD)
+        add_custom_target(complexity
+            COMMAND ${LIZARD} --length 15 --CCN 10 --arguments 5 --xml ${CMAKE_SOURCE_DIR}/usr > ${CMAKE_BINARY_DIR}/complexity-report.xml
+            COMMENT "Running Lizard complexity analysis"
+        )
+    endif()
 endif()
 
-# Option to control building of documentation
-option(BUILD_DOCS "Build Doxygen and Sphinx documentation" ON)
+#------------------------------------------------------------------------------
+# 3. Documentation (Doxygen & Sphinx)
+#------------------------------------------------------------------------------
+if(ENABLE_DOCUMENTATION)
+    find_package(Doxygen REQUIRED)
+    find_program(SPHINX_BUILD sphinx-build REQUIRED)
 
-# Placeholder for adding subdirectories, e.g. for utilities, libraries, kernel
-add_subdirectory(usr/source/s1) # Userland utilities PoC (cal)
-# add_subdirectory(usr/source/s2) # More userland utilities
-# add_subdirectory(usr/source/s4) # C library source
-
-# Kernel source directories (primarily for analysis build of C files)
-add_subdirectory(usr/sys/conf)
-add_subdirectory(usr/sys/ken)
-add_subdirectory(usr/sys/dmr)
-
-
-# --- Documentation Setup (Doxygen & Sphinx) ---
-if(BUILD_DOCS)
-  find_package(Doxygen REQUIRED) # Require Doxygen
-  find_program(SPHINX_EXECUTABLE NAMES sphinx-build sphinx-build.py) # Find Sphinx executable
-
-  if(DOXYGEN_FOUND AND SPHINX_EXECUTABLE)
-    message(STATUS "Found Doxygen: ${DOXYGEN_EXECUTABLE}")
-    message(STATUS "Found Sphinx: ${SPHINX_EXECUTABLE}")
-
-    # Doxygen configuration
-    set(DOXYFILE_IN ${CMAKE_SOURCE_DIR}/Doxyfile.in)
-    set(DOXYFILE_OUT ${CMAKE_BINARY_DIR}/Doxyfile) # Doxygen will run using this file
-    set(DOXYGEN_OUTPUT_DIR ${CMAKE_BINARY_DIR}/doxygen_output) # Actual output dir
-    set(DOXYGEN_XML_DIR ${DOXYGEN_OUTPUT_DIR}/xml) # For Breathe
-
-    # Configure Doxyfile.in to Doxyfile in the build directory
-    # This replaces @CMAKE_SOURCE_DIR@ and @CMAKE_BINARY_DIR@ placeholders
-    configure_file(${DOXYFILE_IN} ${DOXYFILE_OUT} @ONLY)
+    # Configure Doxygen
+    set(DOXY_IN  ${CMAKE_SOURCE_DIR}/Doxyfile.in)
+    set(DOXY_OUT ${CMAKE_BINARY_DIR}/Doxyfile)
+    configure_file(${DOXY_IN} ${DOXY_OUT} @ONLY)
 
     add_custom_target(doxygen ALL
-      COMMAND ${DOXYGEN_EXECUTABLE} ${DOXYFILE_OUT} # Use the configured Doxyfile
-      WORKING_DIRECTORY ${CMAKE_BINARY_DIR} # Run Doxygen from build dir
-      COMMENT "Generating Doxygen XML documentation..."
-      VERBATIM)
+        COMMAND ${DOXYGEN_EXECUTABLE} ${DOXY_OUT}
+        WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
+        COMMENT "Generating Doxygen documentation"
+        VERBATIM
+    )
 
-    # Sphinx target (depends on Doxygen finishing)
-    # Note: SPHINX_CONFIG_DIR is where conf.py is located.
-    # SPHINX_SOURCE_DIR is usually the same or contains it.
-    set(SPHINX_CONFIG_DIR ${CMAKE_SOURCE_DIR}/docs)
-    set(SPHINX_SOURCE_DIR ${CMAKE_SOURCE_DIR}/docs/source) # Where .rst files are
-    set(SPHINX_BUILD_DIR ${CMAKE_BINARY_DIR}/sphinx_output) # HTML output
-
-    # Ensure Breathe path in conf.py is correct relative to CMAKE_BINARY_DIR
-    # breathe_projects = { "UnixV5_Modernized": "<path_to_xml_output_relative_to_conf.py>" }
-    # The path in conf.py is currently: ../build/doxygen_output/xml
-    # If conf.py is at ${CMAKE_SOURCE_DIR}/docs/conf.py
-    # And CMAKE_BINARY_DIR is ${CMAKE_SOURCE_DIR}/build (typical)
-    # Then path from conf.py to ${CMAKE_BINARY_DIR}/doxygen_output/xml is indeed correct.
+    # Sphinx
+    set(SPHINX_SOURCE_DIR ${CMAKE_SOURCE_DIR}/docs)
+    set(SPHINX_BUILD_DIR  ${CMAKE_BINARY_DIR}/docs/html)
 
     add_custom_target(sphinx ALL
-      COMMAND ${SPHINX_EXECUTABLE} -b html ${SPHINX_CONFIG_DIR} ${SPHINX_BUILD_DIR}
-      # Working directory for sphinx: normally where conf.py is, or where it outputs
-      WORKING_DIRECTORY ${SPHINX_CONFIG_DIR}
-      COMMENT "Generating Sphinx HTML documentation..."
-      VERBATIM)
+        COMMAND ${SPHINX_BUILD} -b html ${SPHINX_SOURCE_DIR} ${SPHINX_BUILD_DIR}
+        WORKING_DIRECTORY ${SPHINX_SOURCE_DIR}
+        COMMENT "Building Sphinx HTML documentation"
+        VERBATIM
+    )
 
-    add_dependencies(sphinx doxygen) # Sphinx runs after Doxygen
-
-    # A target to build just the docs
-    add_custom_target(docs DEPENDS doxygen sphinx
-      COMMENT "Building all documentation (Doxygen + Sphinx)")
-
-  else()
-    message(WARNING "Doxygen or Sphinx not found. Documentation will not be built.")
-  endif()
+    add_dependencies(sphinx doxygen)
+    add_custom_target(docs DEPENDS doxygen sphinx COMMENT "Complete documentation build")
 endif()
 
-# Basic install target (optional for now)
-# install(TARGETS ??? DESTINATION bin) # Example
+#------------------------------------------------------------------------------
+# 4. Subdirectories
+#------------------------------------------------------------------------------
+if(BUILD_KERNEL)
+    add_subdirectory(usr/sys)
+endif()
+if(BUILD_USERLAND)
+    add_subdirectory(usr/source)
+endif()
+if(BUILD_COMPILER)
+    add_subdirectory(usr/c)
+endif()
 
-# Enable testing with CTest (optional for now)
-# enable_testing()
-# add_subdirectory(tests) # Example for tests
+#-------------------------------------------------------------------------------
+# 5. Utilities
+#---
+# Distclean target
+add_custom_target(distclean
+    COMMAND ${CMAKE_COMMAND} -E rm -rf ${CMAKE_BINARY_DIR}/*
+    COMMENT "Removing all generated files"
+)
 
-message(STATUS "Project Name: ${PROJECT_NAME}")
-message(STATUS "C Standard: ${CMAKE_C_STANDARD}")
-message(STATUS "Build Type: ${CMAKE_BUILD_TYPE}")
-message(STATUS "CMake C Compiler: ${CMAKE_C_COMPILER}")
-message(STATUS "Documentation Build: ${BUILD_DOCS}")
+# Export compile commands for IDEs
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+# Summary
+message(STATUS "Configuration:")
+message(STATUS "  Build Type       : ${CMAKE_BUILD_TYPE}")
+message(STATUS "  Use Clang        : ${USE_CLANG}")
+message(STATUS "  Coverage Enabled : ${ENABLE_COVERAGE}")
+message(STATUS "  Analysis Enabled : ${ENABLE_ANALYSIS}")
+message(STATUS "  Documentation    : ${ENABLE_DOCUMENTATION}")

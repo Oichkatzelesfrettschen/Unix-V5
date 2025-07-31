@@ -12,7 +12,9 @@
 		"ghcr.io/devcontainers-community/features/llvm:3": {},
 		"ghcr.io/lee-orr/rusty-dev-containers/cargo-llvm-cov:0": {},
 		"ghcr.io/devcontainers-extra/features/actionlint:1": {},
-		"ghcr.io/devcontainers-extra/features/apt-get-packages:1": {},
+		"ghcr.io/devcontainers-extra/features/apt-get-packages:1": {
+			"packages": "build-essential,clang,clang-tools,lld,llvm,llvm-dev,lcov,gcov,cscope,cppcheck,valgrind,gdb,strace,ltrace,hexdump,xxd,objdump,readelf,nm,strings,file,binutils,make,cmake,ninja-build,ctags,universal-ctags,bear,ccache,distcc,flex,bison,autotools-dev,autoconf,automake,libtool,pkg-config,git-flow,tig,tree,htop,tmux,vim,emacs-nox,nano"
+		},
 		"ghcr.io/devcontainers-extra/features/homebrew-package:1": {},
 		"ghcr.io/devcontainers-extra/features/npm-package:1": {},
 		"ghcr.io/devcontainers-extra/features/npm-packages:1": {},

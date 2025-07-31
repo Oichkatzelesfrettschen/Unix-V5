@@ -1,0 +1,25 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Configure Unix V5 with CMake",
+			"type": "shell",
+			"command": "cmake",
+			"args": [
+				"-B",
+				"build",
+				"-S",
+				".",
+				"-G",
+				"Ninja",
+				"-DCMAKE_BUILD_TYPE=Debug",
+				"-DUSE_CLANG=ON"
+			],
+			"group": "build",
+			"isBackground": false,
+			"problemMatcher": [
+				"$gcc"
+			]
+		}
+	]
+}

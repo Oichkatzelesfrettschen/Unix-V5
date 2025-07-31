@@ -1,0 +1,1158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results version="2">
+    <cppcheck version="2.7"/>
+    <errors>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="/workspaces/Unix-V5/usr/c/c00.c">
+            <location file="/workspaces/Unix-V5/usr/c/c00.c" line="617" column="7"/>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="/workspaces/Unix-V5/usr/c/c01.c">
+            <location file="/workspaces/Unix-V5/usr/c/c01.c" line="390" column="6"/>
+        </error>
+        <error id="AssignmentIntegerToAddress" severity="portability" msg="Assigning an integer to a pointer is not portable." verbose="Assigning an integer (int/long/etc) to a pointer is not portable across different platforms and compilers. For example in 32-bit Windows and linux they are same width, but in 64-bit Windows and linux they are of different width. In worst case you end up assigning 64-bit integer to 32-bit pointer. The safe way is to store addresses only in pointer types (or typedefs like uintptr_t)." cwe="758" file0="/workspaces/Unix-V5/usr/c/c02.c">
+            <location file="/workspaces/Unix-V5/usr/c/c02.c" line="524" column="10"/>
+        </error>
+        <error id="missingReturn" severity="error" msg="Found a exit path from function with non-void return type that has missing return statement" verbose="Found a exit path from function with non-void return type that has missing return statement" cwe="758" file0="/workspaces/Unix-V5/usr/c/c02.c">
+            <location file="/workspaces/Unix-V5/usr/c/c02.c" line="126" column="0"/>
+        </error>
+        <error id="missingReturn" severity="error" msg="Found a exit path from function with non-void return type that has missing return statement" verbose="Found a exit path from function with non-void return type that has missing return statement" cwe="758" file0="/workspaces/Unix-V5/usr/c/c02.c">
+            <location file="/workspaces/Unix-V5/usr/c/c02.c" line="694" column="2"/>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="warning" msg="%o in format string (no. 1) requires &apos;unsigned int&apos; but the argument type is &apos;float&apos;." verbose="%o in format string (no. 1) requires &apos;unsigned int&apos; but the argument type is &apos;float&apos;." cwe="686" file0="/workspaces/Unix-V5/usr/c/c02.c">
+            <location file="/workspaces/Unix-V5/usr/c/c02.c" line="167" column="3"/>
+        </error>
+        <error id="wrongPrintfScanfArgNum" severity="error" msg="printf format string requires 2 parameters but only 1 is given." verbose="printf format string requires 2 parameters but only 1 is given." cwe="685" file0="/workspaces/Unix-V5/usr/c/c02.c">
+            <location file="/workspaces/Unix-V5/usr/c/c02.c" line="167" column="3"/>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="warning" msg="%o in format string (no. 1) requires &apos;unsigned int&apos; but the argument type is &apos;double&apos;." verbose="%o in format string (no. 1) requires &apos;unsigned int&apos; but the argument type is &apos;double&apos;." cwe="686" file0="/workspaces/Unix-V5/usr/c/c02.c">
+            <location file="/workspaces/Unix-V5/usr/c/c02.c" line="171" column="3"/>
+        </error>
+        <error id="wrongPrintfScanfArgNum" severity="error" msg="printf format string requires 4 parameters but only 1 is given." verbose="printf format string requires 4 parameters but only 1 is given." cwe="685" file0="/workspaces/Unix-V5/usr/c/c02.c">
+            <location file="/workspaces/Unix-V5/usr/c/c02.c" line="171" column="3"/>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;type&apos; shadows outer variable" verbose="Local variable &apos;type&apos; shadows outer variable" cwe="398" file0="/workspaces/Unix-V5/usr/c/c02.c">
+            <location file="/workspaces/Unix-V5/usr/c/c02.c" line="13" column="6" info="Shadow variable"/>
+            <location file="/workspaces/Unix-V5/usr/c/c0h.c" line="36" column="6" info="Shadowed declaration"/>
+            <symbol>type</symbol>
+        </error>
+        <error id="unusedVariable" severity="style" msg="Unused variable: o4" verbose="Unused variable: o4" cwe="563" file0="/workspaces/Unix-V5/usr/c/c02.c">
+            <location file="/workspaces/Unix-V5/usr/c/c02.c" line="193" column="10"/>
+            <symbol>o4</symbol>
+        </error>
+        <error id="AssignmentIntegerToAddress" severity="portability" msg="Assigning an integer to a pointer is not portable." verbose="Assigning an integer (int/long/etc) to a pointer is not portable across different platforms and compilers. For example in 32-bit Windows and linux they are same width, but in 64-bit Windows and linux they are of different width. In worst case you end up assigning 64-bit integer to 32-bit pointer. The safe way is to store addresses only in pointer types (or typedefs like uintptr_t)." cwe="758" file0="/workspaces/Unix-V5/usr/c/c03.c">
+            <location file="/workspaces/Unix-V5/usr/c/c03.c" line="165" column="10"/>
+        </error>
+        <error id="missingReturn" severity="error" msg="Found a exit path from function with non-void return type that has missing return statement" verbose="Found a exit path from function with non-void return type that has missing return statement" cwe="758" file0="/workspaces/Unix-V5/usr/c/c03.c">
+            <location file="/workspaces/Unix-V5/usr/c/c03.c" line="53" column="2"/>
+        </error>
+        <error id="missingReturn" severity="error" msg="Found a exit path from function with non-void return type that has missing return statement" verbose="Found a exit path from function with non-void return type that has missing return statement" cwe="758" file0="/workspaces/Unix-V5/usr/c/c03.c">
+            <location file="/workspaces/Unix-V5/usr/c/c03.c" line="57" column="2"/>
+        </error>
+        <error id="missingReturn" severity="error" msg="Found a exit path from function with non-void return type that has missing return statement" verbose="Found a exit path from function with non-void return type that has missing return statement" cwe="758" file0="/workspaces/Unix-V5/usr/c/c03.c">
+            <location file="/workspaces/Unix-V5/usr/c/c03.c" line="156" column="0"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;csp&apos; can be reduced." verbose="The scope of the variable &apos;csp&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="/workspaces/Unix-V5/usr/c/c03.c">
+            <location file="/workspaces/Unix-V5/usr/c/c03.c" line="128" column="26"/>
+            <symbol>csp</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;tnode::op&apos; is never used." verbose="struct member &apos;tnode::op&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/c/c0h.c">
+            <location file="/workspaces/Unix-V5/usr/c/c0h.c" line="28" column="6"/>
+            <symbol>tnode::op</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;tnode::type&apos; is never used." verbose="struct member &apos;tnode::type&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/c/c0h.c">
+            <location file="/workspaces/Unix-V5/usr/c/c0h.c" line="29" column="6"/>
+            <symbol>tnode::type</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;tnode::dimp&apos; is never used." verbose="struct member &apos;tnode::dimp&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/c/c0h.c">
+            <location file="/workspaces/Unix-V5/usr/c/c0h.c" line="30" column="6"/>
+            <symbol>tnode::dimp</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;tnode::tr1&apos; is never used." verbose="struct member &apos;tnode::tr1&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/c/c0h.c">
+            <location file="/workspaces/Unix-V5/usr/c/c0h.c" line="31" column="16"/>
+            <symbol>tnode::tr1</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;tnode::tr2&apos; is never used." verbose="struct member &apos;tnode::tr2&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/c/c0h.c">
+            <location file="/workspaces/Unix-V5/usr/c/c0h.c" line="31" column="22"/>
+            <symbol>tnode::tr2</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;tname::op&apos; is never used." verbose="struct member &apos;tname::op&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/c/c0h.c">
+            <location file="/workspaces/Unix-V5/usr/c/c0h.c" line="42" column="6"/>
+            <symbol>tname::op</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;tname::type&apos; is never used." verbose="struct member &apos;tname::type&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/c/c0h.c">
+            <location file="/workspaces/Unix-V5/usr/c/c0h.c" line="43" column="6"/>
+            <symbol>tname::type</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;tname::dimp&apos; is never used." verbose="struct member &apos;tname::dimp&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/c/c0h.c">
+            <location file="/workspaces/Unix-V5/usr/c/c0h.c" line="44" column="6"/>
+            <symbol>tname::dimp</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;tname::class&apos; is never used." verbose="struct member &apos;tname::class&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/c/c0h.c">
+            <location file="/workspaces/Unix-V5/usr/c/c0h.c" line="45" column="6"/>
+            <symbol>tname::class</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;tname::offset&apos; is never used." verbose="struct member &apos;tname::offset&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/c/c0h.c">
+            <location file="/workspaces/Unix-V5/usr/c/c0h.c" line="46" column="6"/>
+            <symbol>tname::offset</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;tname::nloc&apos; is never used." verbose="struct member &apos;tname::nloc&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/c/c0h.c">
+            <location file="/workspaces/Unix-V5/usr/c/c0h.c" line="47" column="6"/>
+            <symbol>tname::nloc</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;tconst::op&apos; is never used." verbose="struct member &apos;tconst::op&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/c/c0h.c">
+            <location file="/workspaces/Unix-V5/usr/c/c0h.c" line="52" column="6"/>
+            <symbol>tconst::op</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;tconst::type&apos; is never used." verbose="struct member &apos;tconst::type&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/c/c0h.c">
+            <location file="/workspaces/Unix-V5/usr/c/c0h.c" line="53" column="6"/>
+            <symbol>tconst::type</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;tconst::dimp&apos; is never used." verbose="struct member &apos;tconst::dimp&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/c/c0h.c">
+            <location file="/workspaces/Unix-V5/usr/c/c0h.c" line="54" column="6"/>
+            <symbol>tconst::dimp</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;tconst::value&apos; is never used." verbose="struct member &apos;tconst::value&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/c/c0h.c">
+            <location file="/workspaces/Unix-V5/usr/c/c0h.c" line="55" column="6"/>
+            <symbol>tconst::value</symbol>
+        </error>
+        <error id="AssignmentAddressToInteger" severity="portability" msg="Assigning a pointer to an integer is not portable." verbose="Assigning a pointer to an integer (int/long/etc) is not portable across different platforms and compilers. For example in 32-bit Windows and linux they are same width, but in 64-bit Windows and linux they are of different width. In worst case you end up assigning 64-bit address to 32-bit integer. The safe way is to store addresses only in pointer types (or typedefs like uintptr_t)." cwe="758" file0="/workspaces/Unix-V5/usr/c/c10.c">
+            <location file="/workspaces/Unix-V5/usr/c/c10.c" line="348" column="5"/>
+        </error>
+        <error id="AssignmentAddressToInteger" severity="portability" msg="Assigning a pointer to an integer is not portable." verbose="Assigning a pointer to an integer (int/long/etc) is not portable across different platforms and compilers. For example in 32-bit Windows and linux they are same width, but in 64-bit Windows and linux they are of different width. In worst case you end up assigning 64-bit address to 32-bit integer. The safe way is to store addresses only in pointer types (or typedefs like uintptr_t)." cwe="758" file0="/workspaces/Unix-V5/usr/c/c10.c">
+            <location file="/workspaces/Unix-V5/usr/c/c10.c" line="639" column="11"/>
+        </error>
+        <error id="danglingTemporaryLifetime" severity="error" msg="Using object that is a temporary." verbose="Using object that is a temporary." cwe="562" file0="/workspaces/Unix-V5/usr/c/c10.c">
+            <location file="/workspaces/Unix-V5/usr/c/c10.c" line="351" column="10"/>
+            <location file="/workspaces/Unix-V5/usr/c/c10.c" line="348" column="8" info="Temporary created here."/>
+            <location file="/workspaces/Unix-V5/usr/c/c10.c" line="348" column="6" info="Address of variable taken here."/>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="warning" msg="%o in format string (no. 1) requires &apos;unsigned int&apos; but the argument type is &apos;tnode *&apos;." verbose="%o in format string (no. 1) requires &apos;unsigned int&apos; but the argument type is &apos;tnode *&apos;." cwe="686" file0="/workspaces/Unix-V5/usr/c/c10.c">
+            <location file="/workspaces/Unix-V5/usr/c/c10.c" line="435" column="3"/>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="warning" msg="%o in format string (no. 1) requires &apos;unsigned int&apos; but the argument type is &apos;tnode *&apos;." verbose="%o in format string (no. 1) requires &apos;unsigned int&apos; but the argument type is &apos;tnode *&apos;." cwe="686" file0="/workspaces/Unix-V5/usr/c/c10.c">
+            <location file="/workspaces/Unix-V5/usr/c/c10.c" line="563" column="3"/>
+        </error>
+        <error id="leakReturnValNotUsed" severity="error" msg="Return value of allocation function &apos;fopen&apos; is not stored." verbose="Return value of allocation function &apos;fopen&apos; is not stored." cwe="771" file0="/workspaces/Unix-V5/usr/c/c10.c">
+            <location file="/workspaces/Unix-V5/usr/c/c10.c" line="51" column="5"/>
+            <symbol>fopen</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;t2&apos; can be reduced." verbose="The scope of the variable &apos;t2&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="/workspaces/Unix-V5/usr/c/c10.c">
+            <location file="/workspaces/Unix-V5/usr/c/c10.c" line="95" column="22"/>
+            <symbol>t2</symbol>
+        </error>
+        <error id="pointerLessThanZero" severity="style" msg="A pointer can not be negative so it is either pointless or an error to check if it is." verbose="A pointer can not be negative so it is either pointless or an error to check if it is." cwe="570" file0="/workspaces/Unix-V5/usr/c/c10.c">
+            <location file="/workspaces/Unix-V5/usr/c/c10.c" line="51" column="27" info="Pointer less than zero"/>
+        </error>
+        <error id="unusedLabelSwitch" severity="warning" msg="Label &apos;const&apos; is not used. Should this be a &apos;case&apos; of the enclosing switch()?" verbose="Label &apos;const&apos; is not used. Should this be a &apos;case&apos; of the enclosing switch()?" cwe="398" file0="/workspaces/Unix-V5/usr/c/c10.c">
+            <location file="/workspaces/Unix-V5/usr/c/c10.c" line="434" column="2"/>
+            <symbol>const</symbol>
+        </error>
+        <error id="unusedVariable" severity="style" msg="Unused variable: goto" verbose="Unused variable: goto" cwe="563" file0="/workspaces/Unix-V5/usr/c/c10.c">
+            <location file="/workspaces/Unix-V5/usr/c/c10.c" line="429" column="3"/>
+            <symbol>goto</symbol>
+        </error>
+        <error id="internalAstError" severity="error" msg="Syntax Error: AST broken, binary operator &apos;=&apos; doesn&apos;t have two operands." verbose="Syntax Error: AST broken, binary operator &apos;=&apos; doesn&apos;t have two operands." file0="/workspaces/Unix-V5/usr/c/c11.c">
+            <location file="/workspaces/Unix-V5/usr/c/c11.c" line="423" column="15"/>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="/workspaces/Unix-V5/usr/c/c12.c">
+            <location file="/workspaces/Unix-V5/usr/c/c12.c" line="342" column="20"/>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;bnode::bop&apos; is never used." verbose="struct member &apos;bnode::bop&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/c/c1h.c">
+            <location file="/workspaces/Unix-V5/usr/c/c1h.c" line="13" column="6"/>
+            <symbol>bnode::bop</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;bnode::btree&apos; is never used." verbose="struct member &apos;bnode::btree&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/c/c1h.c">
+            <location file="/workspaces/Unix-V5/usr/c/c1h.c" line="14" column="16"/>
+            <symbol>bnode::btree</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;bnode::lbl&apos; is never used." verbose="struct member &apos;bnode::lbl&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/c/c1h.c">
+            <location file="/workspaces/Unix-V5/usr/c/c1h.c" line="15" column="6"/>
+            <symbol>bnode::lbl</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;bnode::cond&apos; is never used." verbose="struct member &apos;bnode::cond&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/c/c1h.c">
+            <location file="/workspaces/Unix-V5/usr/c/c1h.c" line="16" column="6"/>
+            <symbol>bnode::cond</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;tname::nop&apos; is never used." verbose="struct member &apos;tname::nop&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/c/c1h.c">
+            <location file="/workspaces/Unix-V5/usr/c/c1h.c" line="20" column="6"/>
+            <symbol>tname::nop</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;tname::ntype&apos; is never used." verbose="struct member &apos;tname::ntype&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/c/c1h.c">
+            <location file="/workspaces/Unix-V5/usr/c/c1h.c" line="21" column="6"/>
+            <symbol>tname::ntype</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;tname::elsize&apos; is never used." verbose="struct member &apos;tname::elsize&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/c/c1h.c">
+            <location file="/workspaces/Unix-V5/usr/c/c1h.c" line="22" column="6"/>
+            <symbol>tname::elsize</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;tname::class&apos; is never used." verbose="struct member &apos;tname::class&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/c/c1h.c">
+            <location file="/workspaces/Unix-V5/usr/c/c1h.c" line="23" column="7"/>
+            <symbol>tname::class</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;tname::regno&apos; is never used." verbose="struct member &apos;tname::regno&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/c/c1h.c">
+            <location file="/workspaces/Unix-V5/usr/c/c1h.c" line="24" column="7"/>
+            <symbol>tname::regno</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;tname::offset&apos; is never used." verbose="struct member &apos;tname::offset&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/c/c1h.c">
+            <location file="/workspaces/Unix-V5/usr/c/c1h.c" line="25" column="6"/>
+            <symbol>tname::offset</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;tname::nloc&apos; is never used." verbose="struct member &apos;tname::nloc&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/c/c1h.c">
+            <location file="/workspaces/Unix-V5/usr/c/c1h.c" line="26" column="6"/>
+            <symbol>tname::nloc</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;swtab::swlab&apos; is never used." verbose="struct member &apos;swtab::swlab&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/c/c1h.c">
+            <location file="/workspaces/Unix-V5/usr/c/c1h.c" line="56" column="6"/>
+            <symbol>swtab::swlab</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;swtab::swval&apos; is never used." verbose="struct member &apos;swtab::swval&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/c/c1h.c">
+            <location file="/workspaces/Unix-V5/usr/c/c1h.c" line="57" column="6"/>
+            <symbol>swtab::swval</symbol>
+        </error>
+        <error id="objectIndex" severity="error" msg="The address of local variable &apos;ap&apos; is accessed at non-zero index." verbose="The address of local variable &apos;ap&apos; is accessed at non-zero index." cwe="758" file0="/workspaces/Unix-V5/usr/c/c20.c">
+            <location file="/workspaces/Unix-V5/usr/c/c20.c" line="310" column="12"/>
+            <location file="/workspaces/Unix-V5/usr/c/c20.c" line="310" column="8" info="Address of variable taken here."/>
+        </error>
+        <error id="objectIndex" severity="error" msg="The address of local variable &apos;ap&apos; is accessed at non-zero index." verbose="The address of local variable &apos;ap&apos; is accessed at non-zero index." cwe="758" file0="/workspaces/Unix-V5/usr/c/c20.c">
+            <location file="/workspaces/Unix-V5/usr/c/c20.c" line="318" column="12"/>
+            <location file="/workspaces/Unix-V5/usr/c/c20.c" line="318" column="8" info="Address of variable taken here."/>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;p-&gt;forw&apos; is redundant or there is possible null pointer dereference: p-&gt;forw." verbose="Either the condition &apos;p-&gt;forw&apos; is redundant or there is possible null pointer dereference: p-&gt;forw." cwe="476" file0="/workspaces/Unix-V5/usr/c/c20.c">
+            <location file="/workspaces/Unix-V5/usr/c/c20.c" line="458" column="6" info="Null pointer dereference"/>
+            <location file="/workspaces/Unix-V5/usr/c/c20.c" line="451" column="12" info="Assuming that condition &apos;p-&gt;forw&apos; is not redundant"/>
+            <symbol>p-&gt;forw</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;niter&apos; can be reduced." verbose="The scope of the variable &apos;niter&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="/workspaces/Unix-V5/usr/c/c20.c">
+            <location file="/workspaces/Unix-V5/usr/c/c20.c" line="69" column="15"/>
+            <symbol>niter</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;op&apos; can be reduced." verbose="The scope of the variable &apos;op&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="/workspaces/Unix-V5/usr/c/c20.c">
+            <location file="/workspaces/Unix-V5/usr/c/c20.c" line="149" column="15"/>
+            <symbol>op</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;ophp&apos; can be reduced." verbose="The scope of the variable &apos;ophp&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="/workspaces/Unix-V5/usr/c/c20.c">
+            <location file="/workspaces/Unix-V5/usr/c/c20.c" line="327" column="33"/>
+            <symbol>ophp</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;p2&apos; can be reduced." verbose="The scope of the variable &apos;p2&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="/workspaces/Unix-V5/usr/c/c20.c">
+            <location file="/workspaces/Unix-V5/usr/c/c20.c" line="607" column="29"/>
+            <symbol>p2</symbol>
+        </error>
+        <error id="uninitvar" severity="error" msg="Uninitialized variable: nflag" verbose="Uninitialized variable: nflag" cwe="457" file0="/workspaces/Unix-V5/usr/c/c20.c">
+            <location file="/workspaces/Unix-V5/usr/c/c20.c" line="82" column="3"/>
+            <symbol>nflag</symbol>
+        </error>
+        <error id="uninitvar" severity="error" msg="Uninitialized variable: nflag" verbose="Uninitialized variable: nflag" cwe="457" file0="/workspaces/Unix-V5/usr/c/c20.c">
+            <location file="/workspaces/Unix-V5/usr/c/c20.c" line="124" column="6"/>
+            <symbol>nflag</symbol>
+        </error>
+        <error id="uninitvar" severity="error" msg="Uninitialized variable: nflag" verbose="Uninitialized variable: nflag" cwe="457" file0="/workspaces/Unix-V5/usr/c/c20.c">
+            <location file="/workspaces/Unix-V5/usr/c/c20.c" line="124" column="6"/>
+            <location file="/workspaces/Unix-V5/usr/c/c20.c" line="79" column="13" info="Assuming condition is false"/>
+            <symbol>nflag</symbol>
+        </error>
+        <error id="internalAstError" severity="error" msg="Syntax Error: AST broken, binary operator &apos;=&apos; doesn&apos;t have two operands." verbose="Syntax Error: AST broken, binary operator &apos;=&apos; doesn&apos;t have two operands." file0="/workspaces/Unix-V5/usr/c/c21.c">
+            <location file="/workspaces/Unix-V5/usr/c/c21.c" line="554" column="6"/>
+        </error>
+        <error id="missingReturn" severity="error" msg="Found a exit path from function with non-void return type that has missing return statement" verbose="Found a exit path from function with non-void return type that has missing return statement" cwe="758" file0="/workspaces/Unix-V5/usr/c/cvopt.c">
+            <location file="/workspaces/Unix-V5/usr/c/cvopt.c" line="349" column="3"/>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="/workspaces/Unix-V5/usr/source/s1/ac.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/ac.c" line="283" column="7"/>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="/workspaces/Unix-V5/usr/source/s1/cal.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/cal.c" line="151" column="4"/>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="/workspaces/Unix-V5/usr/source/s1/cc.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/cc.c" line="444" column="4"/>
+        </error>
+        <error id="internalAstError" severity="error" msg="Syntax Error: AST broken, binary operator &apos;=&apos; doesn&apos;t have two operands." verbose="Syntax Error: AST broken, binary operator &apos;=&apos; doesn&apos;t have two operands." file0="/workspaces/Unix-V5/usr/source/s1/cdb.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/cdb.c" line="67" column="10"/>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="/workspaces/Unix-V5/usr/source/s1/check.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/check.c" line="325" column="11"/>
+        </error>
+        <error id="uninitvar" severity="error" msg="Uninitialized variable: count" verbose="Uninitialized variable: count" cwe="457" file0="/workspaces/Unix-V5/usr/source/s1/chmod.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/chmod.c" line="23" column="4"/>
+            <symbol>count</symbol>
+        </error>
+        <error id="leakReturnValNotUsed" severity="error" msg="Return value of allocation function &apos;fopen&apos; is not stored." verbose="Return value of allocation function &apos;fopen&apos; is not stored." cwe="771" file0="/workspaces/Unix-V5/usr/source/s1/cmp.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/cmp.c" line="31" column="5"/>
+            <symbol>fopen</symbol>
+        </error>
+        <error id="leakReturnValNotUsed" severity="error" msg="Return value of allocation function &apos;fopen&apos; is not stored." verbose="Return value of allocation function &apos;fopen&apos; is not stored." cwe="771" file0="/workspaces/Unix-V5/usr/source/s1/cmp.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/cmp.c" line="34" column="5"/>
+            <symbol>fopen</symbol>
+        </error>
+        <error id="pointerLessThanZero" severity="style" msg="A pointer can not be negative so it is either pointless or an error to check if it is." verbose="A pointer can not be negative so it is either pointless or an error to check if it is." cwe="570" file0="/workspaces/Unix-V5/usr/source/s1/cmp.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/cmp.c" line="31" column="23" info="Pointer less than zero"/>
+        </error>
+        <error id="pointerLessThanZero" severity="style" msg="A pointer can not be negative so it is either pointless or an error to check if it is." verbose="A pointer can not be negative so it is either pointless or an error to check if it is." cwe="570" file0="/workspaces/Unix-V5/usr/source/s1/cmp.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/cmp.c" line="34" column="23" info="Pointer less than zero"/>
+        </error>
+        <error id="missingReturn" severity="error" msg="Found a exit path from function with non-void return type that has missing return statement" verbose="Found a exit path from function with non-void return type that has missing return statement" cwe="758" file0="/workspaces/Unix-V5/usr/source/s1/comm.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/comm.c" line="114" column="12"/>
+        </error>
+        <error id="missingReturn" severity="error" msg="Found a exit path from function with non-void return type that has missing return statement" verbose="Found a exit path from function with non-void return type that has missing return statement" cwe="758" file0="/workspaces/Unix-V5/usr/source/s1/comm.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/comm.c" line="167" column="2"/>
+        </error>
+        <error id="leakReturnValNotUsed" severity="error" msg="Return value of allocation function &apos;fopen&apos; is not stored." verbose="Return value of allocation function &apos;fopen&apos; is not stored." cwe="771" file0="/workspaces/Unix-V5/usr/source/s1/comm.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/comm.c" line="164" column="10"/>
+            <symbol>fopen</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;l&apos; can be reduced." verbose="The scope of the variable &apos;l&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="/workspaces/Unix-V5/usr/source/s1/comm.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/comm.c" line="14" column="6"/>
+            <symbol>l</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;p1&apos; can be reduced." verbose="The scope of the variable &apos;p1&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="/workspaces/Unix-V5/usr/source/s1/cp.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/cp.c" line="10" column="8"/>
+            <symbol>p1</symbol>
+        </error>
+        <error id="uninitvar" severity="error" msg="Uninitialized variable: ct" verbose="Uninitialized variable: ct" cwe="457" file0="/workspaces/Unix-V5/usr/source/s1/cp.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/cp.c" line="59" column="3"/>
+            <symbol>ct</symbol>
+        </error>
+        <error id="AssignmentAddressToInteger" severity="portability" msg="Assigning a pointer to an integer is not portable." verbose="Assigning a pointer to an integer (int/long/etc) is not portable across different platforms and compilers. For example in 32-bit Windows and linux they are same width, but in 64-bit Windows and linux they are of different width. In worst case you end up assigning 64-bit address to 32-bit integer. The safe way is to store addresses only in pointer types (or typedefs like uintptr_t)." cwe="758" file0="/workspaces/Unix-V5/usr/source/s1/date.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/date.c" line="115" column="12"/>
+        </error>
+        <error id="ignoredReturnValue" severity="warning" msg="Return value of function ctime() is not used." verbose="Return value of function ctime() is not used." cwe="252" file0="/workspaces/Unix-V5/usr/source/s1/date.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/date.c" line="50" column="2"/>
+            <symbol>ctime</symbol>
+        </error>
+        <error id="missingReturn" severity="error" msg="Found a exit path from function with non-void return type that has missing return statement" verbose="Found a exit path from function with non-void return type that has missing return statement" cwe="758" file0="/workspaces/Unix-V5/usr/source/s1/date.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/date.c" line="114" column="0"/>
+        </error>
+        <error id="compareValueOutOfTypeRangeError" severity="style" msg="Comparing expression of type &apos;char&apos; against value 65408. Condition is always true." verbose="Comparing expression of type &apos;char&apos; against value 65408. Condition is always true." cwe="398" file0="/workspaces/Unix-V5/usr/source/s1/date.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/date.c" line="172" column="37"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;wf&apos; can be reduced." verbose="The scope of the variable &apos;wf&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="/workspaces/Unix-V5/usr/source/s1/date.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/date.c" line="22" column="6"/>
+            <symbol>wf</symbol>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;argv&apos; can be declared with const" verbose="Parameter &apos;argv&apos; can be declared with const" cwe="398" file0="/workspaces/Unix-V5/usr/source/s1/date.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/date.c" line="18" column="13" info="Parameter &apos;argv&apos; can be declared with const"/>
+            <symbol>argv</symbol>
+        </error>
+        <error id="unusedVariable" severity="style" msg="Unused variable: ch" verbose="Unused variable: ch" cwe="563" file0="/workspaces/Unix-V5/usr/source/s1/date.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/date.c" line="157" column="16"/>
+            <symbol>ch</symbol>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="/workspaces/Unix-V5/usr/source/s1/dd.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/dd.c" line="163" column="11"/>
+        </error>
+        <error id="missingReturn" severity="error" msg="Found a exit path from function with non-void return type that has missing return statement" verbose="Found a exit path from function with non-void return type that has missing return statement" cwe="758" file0="/workspaces/Unix-V5/usr/source/s1/df.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/df.c" line="96" column="2"/>
+        </error>
+        <error id="invalidLengthModifierError" severity="warning" msg="&apos;l&apos; in format string (no. 1) is a length modifier and cannot be used without a conversion specifier." verbose="&apos;l&apos; in format string (no. 1) is a length modifier and cannot be used without a conversion specifier." cwe="704" file0="/workspaces/Unix-V5/usr/source/s1/df.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/df.c" line="57" column="2"/>
+        </error>
+        <error id="invalidLengthModifierError" severity="warning" msg="&apos;l&apos; in format string (no. 1) is a length modifier and cannot be used without a conversion specifier." verbose="&apos;l&apos; in format string (no. 1) is a length modifier and cannot be used without a conversion specifier." cwe="704" file0="/workspaces/Unix-V5/usr/source/s1/df.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/df.c" line="74" column="3"/>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="/workspaces/Unix-V5/usr/source/s1/diff1.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/diff1.c" line="123" column="7"/>
+        </error>
+        <error id="unknownMacro" severity="error" msg="There is an unknown macro here somewhere. Configuration is required. If tsize is a macro then please configure it." verbose="There is an unknown macro here somewhere. Configuration is required. If tsize is a macro then please configure it." file0="/workspaces/Unix-V5/usr/source/s1/dump.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/dump.c" line="69" column="7"/>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="/workspaces/Unix-V5/usr/source/s1/fc.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/fc.c" line="344" column="4"/>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error: ||()" verbose="syntax error: ||()" file0="/workspaces/Unix-V5/usr/source/s1/find.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/find.c" line="67" column="6"/>
+        </error>
+        <error id="AssignmentAddressToInteger" severity="portability" msg="Assigning a pointer to an integer is not portable." verbose="Assigning a pointer to an integer (int/long/etc) is not portable across different platforms and compilers. For example in 32-bit Windows and linux they are same width, but in 64-bit Windows and linux they are of different width. In worst case you end up assigning 64-bit address to 32-bit integer. The safe way is to store addresses only in pointer types (or typedefs like uintptr_t)." cwe="758" file0="/workspaces/Unix-V5/usr/source/s1/glob.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/glob.c" line="240" column="5"/>
+        </error>
+        <error id="danglingTemporaryLifetime" severity="error" msg="Using object that is a temporary." verbose="Using object that is a temporary." cwe="562" file0="/workspaces/Unix-V5/usr/source/s1/glob.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/glob.c" line="241" column="7"/>
+            <location file="/workspaces/Unix-V5/usr/source/s1/glob.c" line="240" column="8" info="Temporary created here."/>
+            <location file="/workspaces/Unix-V5/usr/source/s1/glob.c" line="240" column="6" info="Address of variable taken here."/>
+        </error>
+        <error id="danglingTemporaryLifetime" severity="error" msg="Using object that is a temporary." verbose="Using object that is a temporary." cwe="562" file0="/workspaces/Unix-V5/usr/source/s1/glob.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/glob.c" line="245" column="11"/>
+            <location file="/workspaces/Unix-V5/usr/source/s1/glob.c" line="240" column="8" info="Temporary created here."/>
+            <location file="/workspaces/Unix-V5/usr/source/s1/glob.c" line="241" column="8" info="Assuming condition is false"/>
+            <location file="/workspaces/Unix-V5/usr/source/s1/glob.c" line="240" column="6" info="Address of variable taken here."/>
+        </error>
+        <error id="missingReturn" severity="error" msg="Found a exit path from function with non-void return type that has missing return statement" verbose="Found a exit path from function with non-void return type that has missing return statement" cwe="758" file0="/workspaces/Unix-V5/usr/source/s1/glob.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/glob.c" line="139" column="0"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;p2&apos; can be reduced." verbose="The scope of the variable &apos;p2&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="/workspaces/Unix-V5/usr/source/s1/glob.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/glob.c" line="108" column="24"/>
+            <symbol>p2</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;c&apos; is assigned a value that is never used." verbose="Variable &apos;c&apos; is assigned a value that is never used." cwe="563" file0="/workspaces/Unix-V5/usr/source/s1/glob.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/glob.c" line="180" column="28"/>
+            <symbol>c</symbol>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;s1&apos; can be declared with const" verbose="Parameter &apos;s1&apos; can be declared with const" cwe="398" file0="/workspaces/Unix-V5/usr/source/s1/goto.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/goto.c" line="51" column="6" info="Parameter &apos;s1&apos; can be declared with const"/>
+            <symbol>s1</symbol>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;s2&apos; can be declared with const" verbose="Parameter &apos;s2&apos; can be declared with const" cwe="398" file0="/workspaces/Unix-V5/usr/source/s1/goto.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/goto.c" line="51" column="12" info="Parameter &apos;s2&apos; can be declared with const"/>
+            <symbol>s2</symbol>
+        </error>
+        <error id="unusedVariable" severity="style" msg="Unused variable: c" verbose="Unused variable: c" cwe="563" file0="/workspaces/Unix-V5/usr/source/s1/goto.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/goto.c" line="53" column="6"/>
+            <symbol>c</symbol>
+        </error>
+        <error id="CastIntegerToAddressAtReturn" severity="portability" msg="Returning an integer in a function with pointer return type is not portable." verbose="Returning an integer (int/long/etc) in a function with pointer return type is not portable across different platforms and compilers. For example in 32-bit Windows and Linux they are same width, but in 64-bit Windows and Linux they are of different width. In worst case you end up casting 64-bit integer down to 32-bit pointer. The safe way is to always return a pointer." cwe="758" file0="/workspaces/Unix-V5/usr/source/s1/if.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/if.c" line="23" column="13"/>
+        </error>
+        <error id="AssignmentAddressToInteger" severity="portability" msg="Assigning a pointer to an integer is not portable." verbose="Assigning a pointer to an integer (int/long/etc) is not portable across different platforms and compilers. For example in 32-bit Windows and linux they are same width, but in 64-bit Windows and linux they are of different width. In worst case you end up assigning 64-bit address to 32-bit integer. The safe way is to store addresses only in pointer types (or typedefs like uintptr_t)." cwe="758" file0="/workspaces/Unix-V5/usr/source/s1/if.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/if.c" line="83" column="5"/>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;a&apos; can be declared with const" verbose="Parameter &apos;a&apos; can be declared with const" cwe="398" file0="/workspaces/Unix-V5/usr/source/s1/if.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/if.c" line="110" column="7" info="Parameter &apos;a&apos; can be declared with const"/>
+            <symbol>a</symbol>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;b&apos; can be declared with const" verbose="Parameter &apos;b&apos; can be declared with const" cwe="398" file0="/workspaces/Unix-V5/usr/source/s1/if.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/if.c" line="110" column="11" info="Parameter &apos;b&apos; can be declared with const"/>
+            <symbol>b</symbol>
+        </error>
+        <error id="stringLiteralWrite" severity="error" msg="Modifying string literal &quot;/usr/bin/xxxxxxx..&quot; directly or indirectly is undefined behaviour." verbose="Modifying string literal &quot;/usr/bin/xxxxxxx..&quot; directly or indirectly is undefined behaviour." cwe="758" file0="/workspaces/Unix-V5/usr/source/s1/if.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/if.c" line="138" column="9"/>
+            <location file="/workspaces/Unix-V5/usr/source/s1/if.c" line="140" column="3"/>
+        </error>
+        <error id="stringLiteralWrite" severity="error" msg="Modifying string literal &quot;/usr/bin/xxxxxxx..&quot; directly or indirectly is undefined behaviour." verbose="Modifying string literal &quot;/usr/bin/xxxxxxx..&quot; directly or indirectly is undefined behaviour." cwe="758" file0="/workspaces/Unix-V5/usr/source/s1/if.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/if.c" line="138" column="9"/>
+            <location file="/workspaces/Unix-V5/usr/source/s1/if.c" line="142" column="2"/>
+        </error>
+        <error id="missingReturn" severity="error" msg="Found a exit path from function with non-void return type that has missing return statement" verbose="Found a exit path from function with non-void return type that has missing return statement" cwe="758" file0="/workspaces/Unix-V5/usr/source/s1/init.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/init.c" line="156" column="2"/>
+        </error>
+        <error id="missingReturn" severity="error" msg="Found a exit path from function with non-void return type that has missing return statement" verbose="Found a exit path from function with non-void return type that has missing return statement" cwe="758" file0="/workspaces/Unix-V5/usr/source/s1/init.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/init.c" line="192" column="2"/>
+        </error>
+        <error id="missingReturn" severity="error" msg="Found a exit path from function with non-void return type that has missing return statement" verbose="Found a exit path from function with non-void return type that has missing return statement" cwe="758" file0="/workspaces/Unix-V5/usr/source/s1/init.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/init.c" line="218" column="2"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;tty&apos; can be reduced." verbose="The scope of the variable &apos;tty&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="/workspaces/Unix-V5/usr/source/s1/init.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/init.c" line="177" column="17"/>
+            <symbol>tty</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;zero&apos; can be reduced." verbose="The scope of the variable &apos;zero&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="/workspaces/Unix-V5/usr/source/s1/init.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/init.c" line="200" column="14"/>
+            <symbol>zero</symbol>
+        </error>
+        <error id="stringLiteralWrite" severity="error" msg="Modifying string literal &quot;/dev/ttyx&quot; directly or indirectly is undefined behaviour." verbose="Modifying string literal &quot;/dev/ttyx&quot; directly or indirectly is undefined behaviour." cwe="758" file0="/workspaces/Unix-V5/usr/source/s1/init.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/init.c" line="184" column="9"/>
+            <location file="/workspaces/Unix-V5/usr/source/s1/init.c" line="185" column="3"/>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;ibuf::inum&apos; is never used." verbose="struct member &apos;ibuf::inum&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/source/s1/ln.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/ln.c" line="7" column="6"/>
+            <symbol>ibuf::inum</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;ibuf::inl&apos; is never used." verbose="struct member &apos;ibuf::inl&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/source/s1/ln.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/ln.c" line="9" column="7"/>
+            <symbol>ibuf::inl</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;ibuf::iuid&apos; is never used." verbose="struct member &apos;ibuf::iuid&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/source/s1/ln.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/ln.c" line="10" column="7"/>
+            <symbol>ibuf::iuid</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;ibuf::isize&apos; is never used." verbose="struct member &apos;ibuf::isize&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/source/s1/ln.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/ln.c" line="11" column="6"/>
+            <symbol>ibuf::isize</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;ibuf::iaddr&apos; is never used." verbose="struct member &apos;ibuf::iaddr&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/source/s1/ln.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/ln.c" line="12" column="6"/>
+            <symbol>ibuf::iaddr</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;ibuf::ictime&apos; is never used." verbose="struct member &apos;ibuf::ictime&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/source/s1/ln.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/ln.c" line="13" column="8"/>
+            <symbol>ibuf::ictime</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;ibuf::imtime&apos; is never used." verbose="struct member &apos;ibuf::imtime&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/source/s1/ln.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/ln.c" line="14" column="8"/>
+            <symbol>ibuf::imtime</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;ibuf::fill&apos; is never used." verbose="struct member &apos;ibuf::fill&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/source/s1/ln.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/ln.c" line="15" column="6"/>
+            <symbol>ibuf::fill</symbol>
+        </error>
+        <error id="AssignmentAddressToInteger" severity="portability" msg="Assigning a pointer to an integer is not portable." verbose="Assigning a pointer to an integer (int/long/etc) is not portable across different platforms and compilers. For example in 32-bit Windows and linux they are same width, but in 64-bit Windows and linux they are of different width. In worst case you end up assigning 64-bit address to 32-bit integer. The safe way is to store addresses only in pointer types (or typedefs like uintptr_t)." cwe="758" file0="/workspaces/Unix-V5/usr/source/s1/login.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/login.c" line="63" column="15"/>
+        </error>
+        <error id="objectIndex" severity="error" msg="The address of local variable &apos;fin&apos; is accessed at non-zero index." verbose="The address of local variable &apos;fin&apos; is accessed at non-zero index." cwe="758" file0="/workspaces/Unix-V5/usr/source/s1/login.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/login.c" line="162" column="8"/>
+            <location file="/workspaces/Unix-V5/usr/source/s1/login.c" line="162" column="3" info="Address of variable taken here."/>
+        </error>
+        <error id="objectIndex" severity="error" msg="The address of local variable &apos;fin&apos; is accessed at non-zero index." verbose="The address of local variable &apos;fin&apos; is accessed at non-zero index." cwe="758" file0="/workspaces/Unix-V5/usr/source/s1/login.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/login.c" line="163" column="8"/>
+            <location file="/workspaces/Unix-V5/usr/source/s1/login.c" line="163" column="3" info="Address of variable taken here."/>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;argv&apos; can be declared with const" verbose="Parameter &apos;argv&apos; can be declared with const" cwe="398" file0="/workspaces/Unix-V5/usr/source/s1/login.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/login.c" line="24" column="8" info="Parameter &apos;argv&apos; can be declared with const"/>
+            <symbol>argv</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;buf&apos; can be reduced." verbose="The scope of the variable &apos;buf&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="/workspaces/Unix-V5/usr/source/s1/lpr.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/lpr.c" line="194" column="6"/>
+            <symbol>buf</symbol>
+        </error>
+        <error id="unusedVariable" severity="style" msg="Unused variable: c" verbose="Unused variable: c" cwe="563" file0="/workspaces/Unix-V5/usr/source/s1/lpr.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/lpr.c" line="18" column="6"/>
+            <symbol>c</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;nc&apos; is assigned a value that is never used." verbose="Variable &apos;nc&apos; is assigned a value that is never used." cwe="563" file0="/workspaces/Unix-V5/usr/source/s1/lpr.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/lpr.c" line="109" column="5"/>
+            <symbol>nc</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;nc&apos; is assigned a value that is never used." verbose="Variable &apos;nc&apos; is assigned a value that is never used." cwe="563" file0="/workspaces/Unix-V5/usr/source/s1/lpr.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/lpr.c" line="115" column="7"/>
+            <symbol>nc</symbol>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="/workspaces/Unix-V5/usr/source/s1/ls.c">
+            <location file="/workspaces/Unix-V5/usr/source/s1/ls.c" line="148" column="14"/>
+        </error>
+        <error id="ignoredReturnValue" severity="warning" msg="Return value of function fopen() is not used." verbose="Return value of function fopen() is not used." cwe="252" file0="/workspaces/Unix-V5/usr/source/s2/mail.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/mail.c" line="66" column="2"/>
+            <symbol>fopen</symbol>
+        </error>
+        <error id="missingReturn" severity="error" msg="Found a exit path from function with non-void return type that has missing return statement" verbose="Found a exit path from function with non-void return type that has missing return statement" cwe="758" file0="/workspaces/Unix-V5/usr/source/s2/mail.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/mail.c" line="149" column="0"/>
+        </error>
+        <error id="leakReturnValNotUsed" severity="error" msg="Return value of allocation function &apos;fopen&apos; is not stored." verbose="Return value of allocation function &apos;fopen&apos; is not stored." cwe="771" file0="/workspaces/Unix-V5/usr/source/s2/mail.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/mail.c" line="22" column="5"/>
+            <symbol>fopen</symbol>
+        </error>
+        <error id="leakReturnValNotUsed" severity="error" msg="Return value of allocation function &apos;fopen&apos; is not stored." verbose="Return value of allocation function &apos;fopen&apos; is not stored." cwe="771" file0="/workspaces/Unix-V5/usr/source/s2/mail.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/mail.c" line="66" column="2"/>
+            <symbol>fopen</symbol>
+        </error>
+        <error id="pointerLessThanZero" severity="style" msg="A pointer can not be negative so it is either pointless or an error to check if it is." verbose="A pointer can not be negative so it is either pointless or an error to check if it is." cwe="570" file0="/workspaces/Unix-V5/usr/source/s2/mail.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/mail.c" line="22" column="33" info="Pointer less than zero"/>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;n1&apos; can be declared with const" verbose="Parameter &apos;n1&apos; can be declared with const" cwe="398" file0="/workspaces/Unix-V5/usr/source/s2/mail.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/mail.c" line="154" column="6" info="Parameter &apos;n1&apos; can be declared with const"/>
+            <symbol>n1</symbol>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;n2&apos; can be declared with const" verbose="Parameter &apos;n2&apos; can be declared with const" cwe="398" file0="/workspaces/Unix-V5/usr/source/s2/mail.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/mail.c" line="154" column="12" info="Parameter &apos;n2&apos; can be declared with const"/>
+            <symbol>n2</symbol>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;tail&apos; can be declared with const" verbose="Parameter &apos;tail&apos; can be declared with const" cwe="398" file0="/workspaces/Unix-V5/usr/source/s2/mail.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/mail.c" line="180" column="14" info="Parameter &apos;tail&apos; can be declared with const"/>
+            <symbol>tail</symbol>
+        </error>
+        <error id="stringLiteralWrite" severity="error" msg="Modifying string literal &quot;/tmp/mtm\000\000&quot; directly or indirectly is undefined behaviour." verbose="Modifying string literal &quot;/tmp/mtm\000\000&quot; directly or indirectly is undefined behaviour." cwe="758" file0="/workspaces/Unix-V5/usr/source/s2/mail.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/mail.c" line="201" column="11"/>
+            <location file="/workspaces/Unix-V5/usr/source/s2/mail.c" line="202" column="6"/>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="/workspaces/Unix-V5/usr/source/s2/mkfs.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/mkfs.c" line="177" column="12"/>
+        </error>
+        <error id="unusedVariable" severity="style" msg="Unused variable: n" verbose="Unused variable: n" cwe="563" file0="/workspaces/Unix-V5/usr/source/s2/mount.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/mount.c" line="15" column="6"/>
+            <symbol>n</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;p1&apos; can be reduced." verbose="The scope of the variable &apos;p1&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="/workspaces/Unix-V5/usr/source/s2/mv.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/mv.c" line="30" column="11"/>
+            <symbol>p1</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;p2&apos; can be reduced." verbose="The scope of the variable &apos;p2&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="/workspaces/Unix-V5/usr/source/s2/mv.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/mv.c" line="30" column="16"/>
+            <symbol>p2</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;sbuf::dev&apos; is never used." verbose="struct member &apos;sbuf::dev&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/source/s2/mv.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/mv.c" line="10" column="5"/>
+            <symbol>sbuf::dev</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;sbuf::inum&apos; is never used." verbose="struct member &apos;sbuf::inum&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/source/s2/mv.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/mv.c" line="11" column="5"/>
+            <symbol>sbuf::inum</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;sbuf::imode&apos; is never used." verbose="struct member &apos;sbuf::imode&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/source/s2/mv.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/mv.c" line="12" column="5"/>
+            <symbol>sbuf::imode</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;sbuf::nlink&apos; is never used." verbose="struct member &apos;sbuf::nlink&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/source/s2/mv.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/mv.c" line="13" column="6"/>
+            <symbol>sbuf::nlink</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;sbuf::uid&apos; is never used." verbose="struct member &apos;sbuf::uid&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/source/s2/mv.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/mv.c" line="14" column="6"/>
+            <symbol>sbuf::uid</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;sbuf::gid&apos; is never used." verbose="struct member &apos;sbuf::gid&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/source/s2/mv.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/mv.c" line="15" column="6"/>
+            <symbol>sbuf::gid</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;sbuf::siz0&apos; is never used." verbose="struct member &apos;sbuf::siz0&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/source/s2/mv.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/mv.c" line="16" column="6"/>
+            <symbol>sbuf::siz0</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;sbuf::siz1&apos; is never used." verbose="struct member &apos;sbuf::siz1&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/source/s2/mv.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/mv.c" line="17" column="6"/>
+            <symbol>sbuf::siz1</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;sbuf::addr&apos; is never used." verbose="struct member &apos;sbuf::addr&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/source/s2/mv.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/mv.c" line="18" column="5"/>
+            <symbol>sbuf::addr</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;sbuf::adate&apos; is never used." verbose="struct member &apos;sbuf::adate&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/source/s2/mv.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/mv.c" line="19" column="5"/>
+            <symbol>sbuf::adate</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;sbuf::mdate&apos; is never used." verbose="struct member &apos;sbuf::mdate&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/source/s2/mv.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/mv.c" line="20" column="5"/>
+            <symbol>sbuf::mdate</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;p&apos; can be reduced." verbose="The scope of the variable &apos;p&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="/workspaces/Unix-V5/usr/source/s2/nice.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/nice.c" line="10" column="23"/>
+            <symbol>p</symbol>
+        </error>
+        <error id="internalAstError" severity="error" msg="Syntax Error: AST broken, binary operator &apos;=&apos; doesn&apos;t have two operands." verbose="Syntax Error: AST broken, binary operator &apos;=&apos; doesn&apos;t have two operands." file0="/workspaces/Unix-V5/usr/source/s2/nm.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/nm.c" line="147" column="5"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;p&apos; can be reduced." verbose="The scope of the variable &apos;p&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="/workspaces/Unix-V5/usr/source/s2/nohup.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/nohup.c" line="10" column="23"/>
+            <symbol>p</symbol>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="/workspaces/Unix-V5/usr/source/s2/od.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/od.c" line="32" column="11"/>
+        </error>
+        <error id="AssignmentAddressToInteger" severity="portability" msg="Assigning a pointer to an integer is not portable." verbose="Assigning a pointer to an integer (int/long/etc) is not portable across different platforms and compilers. For example in 32-bit Windows and linux they are same width, but in 64-bit Windows and linux they are of different width. In worst case you end up assigning 64-bit address to 32-bit integer. The safe way is to store addresses only in pointer types (or typedefs like uintptr_t)." cwe="758" file0="/workspaces/Unix-V5/usr/source/s2/pr.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/pr.c" line="160" column="10"/>
+        </error>
+        <error id="AssignmentIntegerToAddress" severity="portability" msg="Assigning an integer to a pointer is not portable." verbose="Assigning an integer (int/long/etc) to a pointer is not portable across different platforms and compilers. For example in 32-bit Windows and linux they are same width, but in 64-bit Windows and linux they are of different width. In worst case you end up assigning 64-bit integer to 32-bit pointer. The safe way is to store addresses only in pointer types (or typedefs like uintptr_t)." cwe="758" file0="/workspaces/Unix-V5/usr/source/s2/pr.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/pr.c" line="211" column="9"/>
+        </error>
+        <error id="AssignmentAddressToInteger" severity="portability" msg="Assigning a pointer to an integer is not portable." verbose="Assigning a pointer to an integer (int/long/etc) is not portable across different platforms and compilers. For example in 32-bit Windows and linux they are same width, but in 64-bit Windows and linux they are of different width. In worst case you end up assigning 64-bit address to 32-bit integer. The safe way is to store addresses only in pointer types (or typedefs like uintptr_t)." cwe="758" file0="/workspaces/Unix-V5/usr/source/s2/pr.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/pr.c" line="221" column="20"/>
+        </error>
+        <error id="AssignmentIntegerToAddress" severity="portability" msg="Assigning an integer to a pointer is not portable." verbose="Assigning an integer (int/long/etc) to a pointer is not portable across different platforms and compilers. For example in 32-bit Windows and linux they are same width, but in 64-bit Windows and linux they are of different width. In worst case you end up assigning 64-bit integer to 32-bit pointer. The safe way is to store addresses only in pointer types (or typedefs like uintptr_t)." cwe="758" file0="/workspaces/Unix-V5/usr/source/s2/pr.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/pr.c" line="285" column="9"/>
+        </error>
+        <error id="missingReturn" severity="error" msg="Found a exit path from function with non-void return type that has missing return statement" verbose="Found a exit path from function with non-void return type that has missing return statement" cwe="758" file0="/workspaces/Unix-V5/usr/source/s2/pr.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/pr.c" line="209" column="0"/>
+        </error>
+        <error id="missingReturn" severity="error" msg="Found a exit path from function with non-void return type that has missing return statement" verbose="Found a exit path from function with non-void return type that has missing return statement" cwe="758" file0="/workspaces/Unix-V5/usr/source/s2/pr.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/pr.c" line="287" column="0"/>
+        </error>
+        <error id="missingReturn" severity="error" msg="Found a exit path from function with non-void return type that has missing return statement" verbose="Found a exit path from function with non-void return type that has missing return statement" cwe="758" file0="/workspaces/Unix-V5/usr/source/s2/pr.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/pr.c" line="445" column="0"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;lastcol&apos; can be reduced." verbose="The scope of the variable &apos;lastcol&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="/workspaces/Unix-V5/usr/source/s2/pr.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/pr.c" line="231" column="15"/>
+            <symbol>lastcol</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;j&apos; can be reduced." verbose="The scope of the variable &apos;j&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="/workspaces/Unix-V5/usr/source/s2/pr.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/pr.c" line="232" column="6"/>
+            <symbol>j</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;ns&apos; can be reduced." verbose="The scope of the variable &apos;ns&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="/workspaces/Unix-V5/usr/source/s2/pr.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/pr.c" line="385" column="15"/>
+            <symbol>ns</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;inode::dev&apos; is never used." verbose="struct member &apos;inode::dev&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/source/s2/pr.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/pr.c" line="36" column="6"/>
+            <symbol>inode::dev</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;inode::inum&apos; is never used." verbose="struct member &apos;inode::inum&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/source/s2/pr.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/pr.c" line="37" column="6"/>
+            <symbol>inode::inum</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;inode::nlink&apos; is never used." verbose="struct member &apos;inode::nlink&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/source/s2/pr.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/pr.c" line="39" column="7"/>
+            <symbol>inode::nlink</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;inode::uid&apos; is never used." verbose="struct member &apos;inode::uid&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/source/s2/pr.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/pr.c" line="40" column="7"/>
+            <symbol>inode::uid</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;inode::gid&apos; is never used." verbose="struct member &apos;inode::gid&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/source/s2/pr.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/pr.c" line="41" column="7"/>
+            <symbol>inode::gid</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;inode::siz0&apos; is never used." verbose="struct member &apos;inode::siz0&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/source/s2/pr.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/pr.c" line="42" column="7"/>
+            <symbol>inode::siz0</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;inode::size&apos; is never used." verbose="struct member &apos;inode::size&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/source/s2/pr.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/pr.c" line="43" column="6"/>
+            <symbol>inode::size</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;inode::ptr&apos; is never used." verbose="struct member &apos;inode::ptr&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/source/s2/pr.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/pr.c" line="44" column="6"/>
+            <symbol>inode::ptr</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;inode::atime&apos; is never used." verbose="struct member &apos;inode::atime&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/source/s2/pr.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/pr.c" line="45" column="6"/>
+            <symbol>inode::atime</symbol>
+        </error>
+        <error id="internalAstError" severity="error" msg="Syntax Error: AST broken, binary operator &apos;=&apos; doesn&apos;t have two operands." verbose="Syntax Error: AST broken, binary operator &apos;=&apos; doesn&apos;t have two operands." file0="/workspaces/Unix-V5/usr/source/s2/prof.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/prof.c" line="106" column="10"/>
+        </error>
+        <error id="AssignmentAddressToInteger" severity="portability" msg="Assigning a pointer to an integer is not portable." verbose="Assigning a pointer to an integer (int/long/etc) is not portable across different platforms and compilers. For example in 32-bit Windows and linux they are same width, but in 64-bit Windows and linux they are of different width. In worst case you end up assigning 64-bit address to 32-bit integer. The safe way is to store addresses only in pointer types (or typedefs like uintptr_t)." cwe="758" file0="/workspaces/Unix-V5/usr/source/s2/ps.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/ps.c" line="85" column="4"/>
+        </error>
+        <error id="AssignmentAddressToInteger" severity="portability" msg="Assigning a pointer to an integer is not portable." verbose="Assigning a pointer to an integer (int/long/etc) is not portable across different platforms and compilers. For example in 32-bit Windows and linux they are same width, but in 64-bit Windows and linux they are of different width. In worst case you end up assigning 64-bit address to 32-bit integer. The safe way is to store addresses only in pointer types (or typedefs like uintptr_t)." cwe="758" file0="/workspaces/Unix-V5/usr/source/s2/ps.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/ps.c" line="86" column="4"/>
+        </error>
+        <error id="redundantAssignment" severity="style" msg="Variable &apos;n&apos; is reassigned a value before the old one has been used." verbose="Variable &apos;n&apos; is reassigned a value before the old one has been used." cwe="563" file0="/workspaces/Unix-V5/usr/source/s2/ps.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/ps.c" line="87" column="4" info="n is overwritten"/>
+            <location file="/workspaces/Unix-V5/usr/source/s2/ps.c" line="85" column="4" info="n is assigned"/>
+            <symbol>n</symbol>
+        </error>
+        <error id="redundantAssignment" severity="style" msg="Variable &apos;laddr&apos; is reassigned a value before the old one has been used." verbose="Variable &apos;laddr&apos; is reassigned a value before the old one has been used." cwe="563" file0="/workspaces/Unix-V5/usr/source/s2/ps.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/ps.c" line="169" column="8" info="laddr is overwritten"/>
+            <location file="/workspaces/Unix-V5/usr/source/s2/ps.c" line="163" column="9" info="laddr is assigned"/>
+            <symbol>laddr</symbol>
+        </error>
+        <error id="redundantAssignment" severity="style" msg="Variable &apos;baddr&apos; is reassigned a value before the old one has been used." verbose="Variable &apos;baddr&apos; is reassigned a value before the old one has been used." cwe="563" file0="/workspaces/Unix-V5/usr/source/s2/ps.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/ps.c" line="170" column="8" info="baddr is overwritten"/>
+            <location file="/workspaces/Unix-V5/usr/source/s2/ps.c" line="166" column="9" info="baddr is assigned"/>
+            <symbol>baddr</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;ap&apos; can be reduced." verbose="The scope of the variable &apos;ap&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="/workspaces/Unix-V5/usr/source/s2/ps.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/ps.c" line="36" column="8"/>
+            <symbol>ap</symbol>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;p&apos; can be declared with const" verbose="Parameter &apos;p&apos; can be declared with const" cwe="398" file0="/workspaces/Unix-V5/usr/source/s2/ps.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/ps.c" line="127" column="13" info="Parameter &apos;p&apos; can be declared with const"/>
+            <symbol>p</symbol>
+        </error>
+        <error id="unusedVariable" severity="style" msg="Unused variable: p" verbose="Unused variable: p" cwe="563" file0="/workspaces/Unix-V5/usr/source/s2/ps.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/ps.c" line="33" column="15"/>
+            <symbol>p</symbol>
+        </error>
+        <error id="AssignmentAddressToInteger" severity="portability" msg="Assigning a pointer to an integer is not portable." verbose="Assigning a pointer to an integer (int/long/etc) is not portable across different platforms and compilers. For example in 32-bit Windows and linux they are same width, but in 64-bit Windows and linux they are of different width. In worst case you end up assigning 64-bit address to 32-bit integer. The safe way is to store addresses only in pointer types (or typedefs like uintptr_t)." cwe="758" file0="/workspaces/Unix-V5/usr/source/s2/pwd.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/pwd.c" line="36" column="9"/>
+        </error>
+        <error id="danglingTemporaryLifetime" severity="error" msg="Using object that is a temporary." verbose="Using object that is a temporary." cwe="562" file0="/workspaces/Unix-V5/usr/source/s2/pwd.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/pwd.c" line="37" column="5"/>
+            <location file="/workspaces/Unix-V5/usr/source/s2/pwd.c" line="36" column="12" info="Temporary created here."/>
+            <location file="/workspaces/Unix-V5/usr/source/s2/pwd.c" line="36" column="10" info="Address of variable taken here."/>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="/workspaces/Unix-V5/usr/source/s2/restor.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/restor.c" line="337" column="13"/>
+        </error>
+        <error id="missingReturn" severity="error" msg="Found a exit path from function with non-void return type that has missing return statement" verbose="Found a exit path from function with non-void return type that has missing return statement" cwe="758" file0="/workspaces/Unix-V5/usr/source/s2/rm.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/rm.c" line="93" column="0"/>
+        </error>
+        <error id="redundantAssignment" severity="style" msg="Variable &apos;i&apos; is reassigned a value before the old one has been used." verbose="Variable &apos;i&apos; is reassigned a value before the old one has been used." cwe="563" file0="/workspaces/Unix-V5/usr/source/s2/rm.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/rm.c" line="85" column="6" info="i is overwritten"/>
+            <location file="/workspaces/Unix-V5/usr/source/s2/rm.c" line="84" column="6" info="i is assigned"/>
+            <symbol>i</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;arg&apos; can be reduced." verbose="The scope of the variable &apos;arg&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="/workspaces/Unix-V5/usr/source/s2/rm.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/rm.c" line="4" column="8"/>
+            <symbol>arg</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;p&apos; can be reduced." verbose="The scope of the variable &apos;p&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="/workspaces/Unix-V5/usr/source/s2/rm.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/rm.c" line="44" column="8"/>
+            <symbol>p</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;stbuf::dev&apos; is never used." verbose="struct member &apos;stbuf::dev&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/source/s2/rm.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/rm.c" line="28" column="6"/>
+            <symbol>stbuf::dev</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;stbuf::inum&apos; is never used." verbose="struct member &apos;stbuf::inum&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/source/s2/rm.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/rm.c" line="29" column="6"/>
+            <symbol>stbuf::inum</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;stbuf::mode&apos; is never used." verbose="struct member &apos;stbuf::mode&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/source/s2/rm.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/rm.c" line="30" column="6"/>
+            <symbol>stbuf::mode</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;stbuf::nlink&apos; is never used." verbose="struct member &apos;stbuf::nlink&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/source/s2/rm.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/rm.c" line="31" column="7"/>
+            <symbol>stbuf::nlink</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;stbuf::uid&apos; is never used." verbose="struct member &apos;stbuf::uid&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/source/s2/rm.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/rm.c" line="32" column="7"/>
+            <symbol>stbuf::uid</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;stbuf::gid&apos; is never used." verbose="struct member &apos;stbuf::gid&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/source/s2/rm.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/rm.c" line="33" column="7"/>
+            <symbol>stbuf::gid</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;stbuf::siz0&apos; is never used." verbose="struct member &apos;stbuf::siz0&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/source/s2/rm.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/rm.c" line="34" column="7"/>
+            <symbol>stbuf::siz0</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;stbuf::siz1&apos; is never used." verbose="struct member &apos;stbuf::siz1&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/source/s2/rm.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/rm.c" line="35" column="7"/>
+            <symbol>stbuf::siz1</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;stbuf::addr&apos; is never used." verbose="struct member &apos;stbuf::addr&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/source/s2/rm.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/rm.c" line="36" column="6"/>
+            <symbol>stbuf::addr</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;stbuf::adate&apos; is never used." verbose="struct member &apos;stbuf::adate&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/source/s2/rm.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/rm.c" line="37" column="6"/>
+            <symbol>stbuf::adate</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;stbuf::mdate&apos; is never used." verbose="struct member &apos;stbuf::mdate&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/source/s2/rm.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/rm.c" line="38" column="6"/>
+            <symbol>stbuf::mdate</symbol>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="/workspaces/Unix-V5/usr/source/s2/sa.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/sa.c" line="370" column="8"/>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="/workspaces/Unix-V5/usr/source/s2/sh.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/sh.c" line="358" column="14"/>
+        </error>
+        <error id="invalidLengthModifierError" severity="warning" msg="&apos;l&apos; in format string (no. 1) is a length modifier and cannot be used without a conversion specifier." verbose="&apos;l&apos; in format string (no. 1) is a length modifier and cannot be used without a conversion specifier." cwe="704" file0="/workspaces/Unix-V5/usr/source/s2/size.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/size.c" line="31" column="3"/>
+        </error>
+        <error id="invalidLengthModifierError" severity="warning" msg="&apos;l&apos; in format string (no. 2) is a length modifier and cannot be used without a conversion specifier." verbose="&apos;l&apos; in format string (no. 2) is a length modifier and cannot be used without a conversion specifier." cwe="704" file0="/workspaces/Unix-V5/usr/source/s2/size.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/size.c" line="31" column="3"/>
+        </error>
+        <error id="invalidLengthModifierError" severity="warning" msg="&apos;l&apos; in format string (no. 3) is a length modifier and cannot be used without a conversion specifier." verbose="&apos;l&apos; in format string (no. 3) is a length modifier and cannot be used without a conversion specifier." cwe="704" file0="/workspaces/Unix-V5/usr/source/s2/size.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/size.c" line="31" column="3"/>
+        </error>
+        <error id="invalidLengthModifierError" severity="warning" msg="&apos;l&apos; in format string (no. 1) is a length modifier and cannot be used without a conversion specifier." verbose="&apos;l&apos; in format string (no. 1) is a length modifier and cannot be used without a conversion specifier." cwe="704" file0="/workspaces/Unix-V5/usr/source/s2/size.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/size.c" line="33" column="3"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;f&apos; can be reduced." verbose="The scope of the variable &apos;f&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="/workspaces/Unix-V5/usr/source/s2/size.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/size.c" line="9" column="16"/>
+            <symbol>f</symbol>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="/workspaces/Unix-V5/usr/source/s2/sort.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/sort.c" line="141" column="9"/>
+        </error>
+        <error id="leakReturnValNotUsed" severity="error" msg="Return value of allocation function &apos;fopen&apos; is not stored." verbose="Return value of allocation function &apos;fopen&apos; is not stored." cwe="771" file0="/workspaces/Unix-V5/usr/source/s2/split.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/split.c" line="40" column="6"/>
+            <symbol>fopen</symbol>
+        </error>
+        <error id="pointerLessThanZero" severity="style" msg="A pointer can not be negative so it is either pointless or an error to check if it is." verbose="A pointer can not be negative so it is either pointless or an error to check if it is." cwe="570" file0="/workspaces/Unix-V5/usr/source/s2/split.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/split.c" line="40" column="24" info="Pointer less than zero"/>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="/workspaces/Unix-V5/usr/source/s2/stty.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/stty.c" line="81" column="10"/>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="/workspaces/Unix-V5/usr/source/s2/su.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/su.c" line="29" column="12"/>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;Anonymous0::x1&apos; is never used." verbose="struct member &apos;Anonymous0::x1&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/source/s2/tee.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/tee.c" line="13" column="15"/>
+            <symbol>Anonymous0::x1</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;Anonymous0::x2&apos; is never used." verbose="struct member &apos;Anonymous0::x2&apos; is never used." cwe="563" file0="/workspaces/Unix-V5/usr/source/s2/tee.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/tee.c" line="13" column="28"/>
+            <symbol>Anonymous0::x2</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;j&apos; can be reduced." verbose="The scope of the variable &apos;j&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="/workspaces/Unix-V5/usr/source/s2/tr.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/tr.c" line="14" column="9"/>
+            <symbol>j</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;i&apos; can be reduced." verbose="The scope of the variable &apos;i&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="/workspaces/Unix-V5/usr/source/s2/tr.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/tr.c" line="129" column="9"/>
+            <symbol>i</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;n&apos; can be reduced." verbose="The scope of the variable &apos;n&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="/workspaces/Unix-V5/usr/source/s2/tr.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/tr.c" line="129" column="12"/>
+            <symbol>n</symbol>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="/workspaces/Unix-V5/usr/source/s2/typo.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/typo.c" line="417" column="11"/>
+        </error>
+        <error id="arrayIndexOutOfBounds" severity="error" msg="Array &apos;mp-&gt;file[32]&apos; accessed at index 64, which is out of bounds." verbose="Array &apos;mp-&gt;file[32]&apos; accessed at index 64, which is out of bounds." cwe="788" file0="/workspaces/Unix-V5/usr/source/s2/umount.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/umount.c" line="42" column="39" info="Array index out of bounds"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;p2&apos; can be reduced." verbose="The scope of the variable &apos;p2&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="/workspaces/Unix-V5/usr/source/s2/umount.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/umount.c" line="13" column="22"/>
+            <symbol>p2</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;d&apos; can be reduced." verbose="The scope of the variable &apos;d&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="/workspaces/Unix-V5/usr/source/s2/uniq.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/uniq.c" line="153" column="6"/>
+            <symbol>d</symbol>
+        </error>
+        <error id="leakReturnValNotUsed" severity="error" msg="Return value of allocation function &apos;fopen&apos; is not stored." verbose="Return value of allocation function &apos;fopen&apos; is not stored." cwe="771" file0="/workspaces/Unix-V5/usr/source/s2/wc.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/wc.c" line="17" column="11"/>
+            <symbol>fopen</symbol>
+        </error>
+        <error id="pointerLessThanZero" severity="style" msg="A pointer can not be negative so it is either pointless or an error to check if it is." verbose="A pointer can not be negative so it is either pointless or an error to check if it is." cwe="570" file0="/workspaces/Unix-V5/usr/source/s2/wc.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/wc.c" line="17" column="29" info="Pointer less than zero"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;(n=-16)&gt;=0&apos; is always false" verbose="Condition &apos;(n=-16)&gt;=0&apos; is always false" cwe="570" file0="/workspaces/Unix-V5/usr/source/s2/who.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/who.c" line="40" column="25" info="Condition &apos;(n=-16)&gt;=0&apos; is always false"/>
+        </error>
+        <error id="redundantAssignment" severity="style" msg="Variable &apos;p&apos; is reassigned a value before the old one has been used." verbose="Variable &apos;p&apos; is reassigned a value before the old one has been used." cwe="563" file0="/workspaces/Unix-V5/usr/source/s2/who.c">
+            <location file="/workspaces/Unix-V5/usr/source/s2/who.c" line="40" column="8" info="p is overwritten"/>
+            <location file="/workspaces/Unix-V5/usr/source/s2/who.c" line="39" column="4" info="p is assigned"/>
+            <symbol>p</symbol>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="/workspaces/Unix-V5/usr/source/s3/ctime.c">
+            <location file="/workspaces/Unix-V5/usr/source/s3/ctime.c" line="100" column="12"/>
+        </error>
+        <error id="ignoredReturnValue" severity="warning" msg="Return value of function fopen() is not used." verbose="Return value of function fopen() is not used." cwe="252" file0="/workspaces/Unix-V5/usr/source/s4/getpw.c">
+            <location file="/workspaces/Unix-V5/usr/source/s4/getpw.c" line="11" column="3"/>
+            <symbol>fopen</symbol>
+        </error>
+        <error id="leakReturnValNotUsed" severity="error" msg="Return value of allocation function &apos;fopen&apos; is not stored." verbose="Return value of allocation function &apos;fopen&apos; is not stored." cwe="771" file0="/workspaces/Unix-V5/usr/source/s4/getpw.c">
+            <location file="/workspaces/Unix-V5/usr/source/s4/getpw.c" line="11" column="3"/>
+            <symbol>fopen</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;bp&apos; can be reduced." verbose="The scope of the variable &apos;bp&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="/workspaces/Unix-V5/usr/source/s4/getpw.c">
+            <location file="/workspaces/Unix-V5/usr/source/s4/getpw.c" line="8" column="17"/>
+            <symbol>bp</symbol>
+        </error>
+        <error id="AssignmentAddressToInteger" severity="portability" msg="Assigning a pointer to an integer is not portable." verbose="Assigning a pointer to an integer (int/long/etc) is not portable across different platforms and compilers. For example in 32-bit Windows and linux they are same width, but in 64-bit Windows and linux they are of different width. In worst case you end up assigning 64-bit address to 32-bit integer. The safe way is to store addresses only in pointer types (or typedefs like uintptr_t)." cwe="758" file0="/workspaces/Unix-V5/usr/source/s4/mon.c">
+            <location file="/workspaces/Unix-V5/usr/source/s4/mon.c" line="18" column="9"/>
+        </error>
+        <error id="AssignmentAddressToInteger" severity="portability" msg="Assigning a pointer to an integer is not portable." verbose="Assigning a pointer to an integer (int/long/etc) is not portable across different platforms and compilers. For example in 32-bit Windows and linux they are same width, but in 64-bit Windows and linux they are of different width. In worst case you end up assigning 64-bit address to 32-bit integer. The safe way is to store addresses only in pointer types (or typedefs like uintptr_t)." cwe="758" file0="/workspaces/Unix-V5/usr/source/s4/mon.c">
+            <location file="/workspaces/Unix-V5/usr/source/s4/mon.c" line="19" column="9"/>
+        </error>
+        <error id="AssignmentIntegerToAddress" severity="portability" msg="Assigning an integer to a pointer is not portable." verbose="Assigning an integer (int/long/etc) to a pointer is not portable across different platforms and compilers. For example in 32-bit Windows and linux they are same width, but in 64-bit Windows and linux they are of different width. In worst case you end up assigning 64-bit integer to 32-bit pointer. The safe way is to store addresses only in pointer types (or typedefs like uintptr_t)." cwe="758" file0="/workspaces/Unix-V5/usr/source/s4/mon.c">
+            <location file="/workspaces/Unix-V5/usr/source/s4/mon.c" line="22" column="6"/>
+        </error>
+        <error id="missingReturn" severity="error" msg="Found a exit path from function with non-void return type that has missing return statement" verbose="Found a exit path from function with non-void return type that has missing return statement" cwe="758" file0="/workspaces/Unix-V5/usr/source/s4/perror.c">
+            <location file="/workspaces/Unix-V5/usr/source/s4/perror.c" line="14" column="3"/>
+        </error>
+        <error id="AssignmentIntegerToAddress" severity="portability" msg="Assigning an integer to a pointer is not portable." verbose="Assigning an integer (int/long/etc) to a pointer is not portable across different platforms and compilers. For example in 32-bit Windows and linux they are same width, but in 64-bit Windows and linux they are of different width. In worst case you end up assigning 64-bit integer to 32-bit pointer. The safe way is to store addresses only in pointer types (or typedefs like uintptr_t)." cwe="758" file0="/workspaces/Unix-V5/usr/source/s4/qsort.c">
+            <location file="/workspaces/Unix-V5/usr/source/s4/qsort.c" line="23" column="5"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;c&apos; can be reduced." verbose="The scope of the variable &apos;c&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="/workspaces/Unix-V5/usr/source/s4/qsort.c">
+            <location file="/workspaces/Unix-V5/usr/source/s4/qsort.c" line="90" column="26"/>
+            <symbol>c</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;c&apos; can be reduced." verbose="The scope of the variable &apos;c&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="/workspaces/Unix-V5/usr/source/s4/qsort.c">
+            <location file="/workspaces/Unix-V5/usr/source/s4/qsort.c" line="107" column="7"/>
+            <symbol>c</symbol>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;es&apos; shadows outer variable" verbose="Local variable &apos;es&apos; shadows outer variable" cwe="398" file0="/workspaces/Unix-V5/usr/source/s4/qsort.c">
+            <location file="/workspaces/Unix-V5/usr/source/s4/qsort.c" line="18" column="25" info="Shadow variable"/>
+            <location file="/workspaces/Unix-V5/usr/source/s4/qsort.c" line="7" column="8" info="Shadowed declaration"/>
+            <symbol>es</symbol>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;n&apos; shadows outer variable" verbose="Local variable &apos;n&apos; shadows outer variable" cwe="398" file0="/workspaces/Unix-V5/usr/source/s4/qsort.c">
+            <location file="/workspaces/Unix-V5/usr/source/s4/qsort.c" line="20" column="6" info="Shadow variable"/>
+            <location file="/workspaces/Unix-V5/usr/source/s4/qsort.c" line="7" column="5" info="Shadowed declaration"/>
+            <symbol>n</symbol>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;n&apos; shadows outer variable" verbose="Local variable &apos;n&apos; shadows outer variable" cwe="398" file0="/workspaces/Unix-V5/usr/source/s4/qsort.c">
+            <location file="/workspaces/Unix-V5/usr/source/s4/qsort.c" line="91" column="6" info="Shadow variable"/>
+            <location file="/workspaces/Unix-V5/usr/source/s4/qsort.c" line="7" column="5" info="Shadowed declaration"/>
+            <symbol>n</symbol>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;n&apos; shadows outer variable" verbose="Local variable &apos;n&apos; shadows outer variable" cwe="398" file0="/workspaces/Unix-V5/usr/source/s4/qsort.c">
+            <location file="/workspaces/Unix-V5/usr/source/s4/qsort.c" line="108" column="6" info="Shadow variable"/>
+            <location file="/workspaces/Unix-V5/usr/source/s4/qsort.c" line="7" column="5" info="Shadowed declaration"/>
+            <symbol>n</symbol>
+        </error>
+        <error id="AssignmentAddressToInteger" severity="portability" msg="Assigning a pointer to an integer is not portable." verbose="Assigning a pointer to an integer (int/long/etc) is not portable across different platforms and compilers. For example in 32-bit Windows and linux they are same width, but in 64-bit Windows and linux they are of different width. In worst case you end up assigning 64-bit address to 32-bit integer. The safe way is to store addresses only in pointer types (or typedefs like uintptr_t)." cwe="758" file0="/workspaces/Unix-V5/usr/sys/conf/mkconf.c">
+            <location file="/workspaces/Unix-V5/usr/sys/conf/mkconf.c" line="317" column="16"/>
+        </error>
+        <error id="AssignmentAddressToInteger" severity="portability" msg="Assigning a pointer to an integer is not portable." verbose="Assigning a pointer to an integer (int/long/etc) is not portable across different platforms and compilers. For example in 32-bit Windows and linux they are same width, but in 64-bit Windows and linux they are of different width. In worst case you end up assigning 64-bit address to 32-bit integer. The safe way is to store addresses only in pointer types (or typedefs like uintptr_t)." cwe="758" file0="/workspaces/Unix-V5/usr/sys/conf/mkconf.c">
+            <location file="/workspaces/Unix-V5/usr/sys/conf/mkconf.c" line="318" column="16"/>
+        </error>
+        <error id="AssignmentIntegerToAddress" severity="portability" msg="Assigning an integer to a pointer is not portable." verbose="Assigning an integer (int/long/etc) to a pointer is not portable across different platforms and compilers. For example in 32-bit Windows and linux they are same width, but in 64-bit Windows and linux they are of different width. In worst case you end up assigning 64-bit integer to 32-bit pointer. The safe way is to store addresses only in pointer types (or typedefs like uintptr_t)." cwe="758" file0="/workspaces/Unix-V5/usr/sys/conf/mkconf.c">
+            <location file="/workspaces/Unix-V5/usr/sys/conf/mkconf.c" line="372" column="12"/>
+        </error>
+        <error id="AssignmentIntegerToAddress" severity="portability" msg="Assigning an integer to a pointer is not portable." verbose="Assigning an integer (int/long/etc) to a pointer is not portable across different platforms and compilers. For example in 32-bit Windows and linux they are same width, but in 64-bit Windows and linux they are of different width. In worst case you end up assigning 64-bit integer to 32-bit pointer. The safe way is to store addresses only in pointer types (or typedefs like uintptr_t)." cwe="758" file0="/workspaces/Unix-V5/usr/sys/conf/mkconf.c">
+            <location file="/workspaces/Unix-V5/usr/sys/conf/mkconf.c" line="376" column="12"/>
+        </error>
+        <error id="AssignmentAddressToInteger" severity="portability" msg="Assigning a pointer to an integer is not portable." verbose="Assigning a pointer to an integer (int/long/etc) is not portable across different platforms and compilers. For example in 32-bit Windows and linux they are same width, but in 64-bit Windows and linux they are of different width. In worst case you end up assigning 64-bit address to 32-bit integer. The safe way is to store addresses only in pointer types (or typedefs like uintptr_t)." cwe="758" file0="/workspaces/Unix-V5/usr/sys/conf/mkconf.c">
+            <location file="/workspaces/Unix-V5/usr/sys/conf/mkconf.c" line="430" column="17"/>
+        </error>
+        <error id="redundantAssignment" severity="style" msg="Variable &apos;ev&apos; is reassigned a value before the old one has been used." verbose="Variable &apos;ev&apos; is reassigned a value before the old one has been used." cwe="563" file0="/workspaces/Unix-V5/usr/sys/conf/mkconf.c">
+            <location file="/workspaces/Unix-V5/usr/sys/conf/mkconf.c" line="344" column="7" info="ev is overwritten"/>
+            <location file="/workspaces/Unix-V5/usr/sys/conf/mkconf.c" line="342" column="8" info="ev is assigned"/>
+            <symbol>ev</symbol>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="/workspaces/Unix-V5/usr/sys/dmr/bio.c">
+            <location file="/workspaces/Unix-V5/usr/sys/dmr/bio.c" line="29" column="15"/>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="/workspaces/Unix-V5/usr/sys/dmr/cat.c">
+            <location file="/workspaces/Unix-V5/usr/sys/dmr/cat.c" line="33" column="19"/>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="/workspaces/Unix-V5/usr/sys/dmr/dc.c">
+            <location file="/workspaces/Unix-V5/usr/sys/dmr/dc.c" line="89" column="15"/>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="/workspaces/Unix-V5/usr/sys/dmr/dh.c">
+            <location file="/workspaces/Unix-V5/usr/sys/dmr/dh.c" line="64" column="16"/>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="/workspaces/Unix-V5/usr/sys/dmr/dhdm.c">
+            <location file="/workspaces/Unix-V5/usr/sys/dmr/dhdm.c" line="38" column="15"/>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="/workspaces/Unix-V5/usr/sys/dmr/dhfdm.c">
+            <location file="/workspaces/Unix-V5/usr/sys/dmr/dhfdm.c" line="19" column="14"/>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="/workspaces/Unix-V5/usr/sys/dmr/dn.c">
+            <location file="/workspaces/Unix-V5/usr/sys/dmr/dn.c" line="46" column="27"/>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="/workspaces/Unix-V5/usr/sys/dmr/dp.c">
+            <location file="/workspaces/Unix-V5/usr/sys/dmr/dp.c" line="179" column="6"/>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="/workspaces/Unix-V5/usr/sys/dmr/kl.c">
+            <location file="/workspaces/Unix-V5/usr/sys/dmr/kl.c" line="62" column="15"/>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="/workspaces/Unix-V5/usr/sys/dmr/lp.c">
+            <location file="/workspaces/Unix-V5/usr/sys/dmr/lp.c" line="53" column="12"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;a&apos; can be reduced." verbose="The scope of the variable &apos;a&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="/workspaces/Unix-V5/usr/sys/dmr/mem.c">
+            <location file="/workspaces/Unix-V5/usr/sys/dmr/mem.c" line="21" column="6"/>
+            <symbol>a</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;a&apos; can be reduced." verbose="The scope of the variable &apos;a&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="/workspaces/Unix-V5/usr/sys/dmr/mem.c">
+            <location file="/workspaces/Unix-V5/usr/sys/dmr/mem.c" line="42" column="6"/>
+            <symbol>a</symbol>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="/workspaces/Unix-V5/usr/sys/dmr/pc.c">
+            <location file="/workspaces/Unix-V5/usr/sys/dmr/pc.c" line="67" column="18"/>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="/workspaces/Unix-V5/usr/sys/dmr/rf.c">
+            <location file="/workspaces/Unix-V5/usr/sys/dmr/rf.c" line="41" column="15"/>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="/workspaces/Unix-V5/usr/sys/dmr/rk.c">
+            <location file="/workspaces/Unix-V5/usr/sys/dmr/rk.c" line="52" column="15"/>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="/workspaces/Unix-V5/usr/sys/dmr/rp.c">
+            <location file="/workspaces/Unix-V5/usr/sys/dmr/rp.c" line="78" column="15"/>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="/workspaces/Unix-V5/usr/sys/dmr/tc.c">
+            <location file="/workspaces/Unix-V5/usr/sys/dmr/tc.c" line="61" column="15"/>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="/workspaces/Unix-V5/usr/sys/dmr/tm.c">
+            <location file="/workspaces/Unix-V5/usr/sys/dmr/tm.c" line="96" column="16"/>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="/workspaces/Unix-V5/usr/sys/dmr/tty.c">
+            <location file="/workspaces/Unix-V5/usr/sys/dmr/tty.c" line="312" column="9"/>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="/workspaces/Unix-V5/usr/sys/dmr/vs.c">
+            <location file="/workspaces/Unix-V5/usr/sys/dmr/vs.c" line="93" column="10"/>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="/workspaces/Unix-V5/usr/sys/dmr/vt.c">
+            <location file="/workspaces/Unix-V5/usr/sys/dmr/vt.c" line="37" column="14"/>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="/workspaces/Unix-V5/usr/sys/ken/alloc.c">
+            <location file="/workspaces/Unix-V5/usr/sys/ken/alloc.c" line="214" column="15"/>
+        </error>
+        <error id="AssignmentIntegerToAddress" severity="portability" msg="Assigning an integer to a pointer is not portable." verbose="Assigning an integer (int/long/etc) to a pointer is not portable across different platforms and compilers. For example in 32-bit Windows and linux they are same width, but in 64-bit Windows and linux they are of different width. In worst case you end up assigning 64-bit integer to 32-bit pointer. The safe way is to store addresses only in pointer types (or typedefs like uintptr_t)." cwe="758" file0="/workspaces/Unix-V5/usr/sys/ken/clock.c">
+            <location file="/workspaces/Unix-V5/usr/sys/ken/clock.c" line="107" column="7"/>
+        </error>
+        <error id="missingReturn" severity="error" msg="Found a exit path from function with non-void return type that has missing return statement" verbose="Found a exit path from function with non-void return type that has missing return statement" cwe="758" file0="/workspaces/Unix-V5/usr/sys/ken/clock.c">
+            <location file="/workspaces/Unix-V5/usr/sys/ken/clock.c" line="115" column="2"/>
+        </error>
+        <error id="internalAstError" severity="error" msg="Syntax Error: AST broken, binary operator &apos;=&apos; doesn&apos;t have two operands." verbose="Syntax Error: AST broken, binary operator &apos;=&apos; doesn&apos;t have two operands." file0="/workspaces/Unix-V5/usr/sys/ken/fio.c">
+            <location file="/workspaces/Unix-V5/usr/sys/ken/fio.c" line="120" column="5"/>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="/workspaces/Unix-V5/usr/sys/ken/iget.c">
+            <location file="/workspaces/Unix-V5/usr/sys/ken/iget.c" line="30" column="15"/>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="/workspaces/Unix-V5/usr/sys/ken/main.c">
+            <location file="/workspaces/Unix-V5/usr/sys/ken/main.c" line="78" column="17"/>
+        </error>
+        <error id="AssignmentAddressToInteger" severity="portability" msg="Assigning a pointer to an integer is not portable." verbose="Assigning a pointer to an integer (int/long/etc) is not portable across different platforms and compilers. For example in 32-bit Windows and linux they are same width, but in 64-bit Windows and linux they are of different width. In worst case you end up assigning 64-bit address to 32-bit integer. The safe way is to store addresses only in pointer types (or typedefs like uintptr_t)." cwe="758" file0="/workspaces/Unix-V5/usr/sys/ken/malloc.c">
+            <location file="/workspaces/Unix-V5/usr/sys/ken/malloc.c" line="19" column="6"/>
+        </error>
+        <error id="AssignmentIntegerToAddress" severity="portability" msg="Assigning an integer to a pointer is not portable." verbose="Assigning an integer (int/long/etc) to a pointer is not portable across different platforms and compilers. For example in 32-bit Windows and linux they are same width, but in 64-bit Windows and linux they are of different width. In worst case you end up assigning 64-bit integer to 32-bit pointer. The safe way is to store addresses only in pointer types (or typedefs like uintptr_t)." cwe="758" file0="/workspaces/Unix-V5/usr/sys/ken/malloc.c">
+            <location file="/workspaces/Unix-V5/usr/sys/ken/malloc.c" line="20" column="15"/>
+        </error>
+        <error id="AssignmentIntegerToAddress" severity="portability" msg="Assigning an integer to a pointer is not portable." verbose="Assigning an integer (int/long/etc) to a pointer is not portable across different platforms and compilers. For example in 32-bit Windows and linux they are same width, but in 64-bit Windows and linux they are of different width. In worst case you end up assigning 64-bit integer to 32-bit pointer. The safe way is to store addresses only in pointer types (or typedefs like uintptr_t)." cwe="758" file0="/workspaces/Unix-V5/usr/sys/ken/malloc.c">
+            <location file="/workspaces/Unix-V5/usr/sys/ken/malloc.c" line="21" column="20"/>
+        </error>
+        <error id="AssignmentIntegerToAddress" severity="portability" msg="Assigning an integer to a pointer is not portable." verbose="Assigning an integer (int/long/etc) to a pointer is not portable across different platforms and compilers. For example in 32-bit Windows and linux they are same width, but in 64-bit Windows and linux they are of different width. In worst case you end up assigning 64-bit integer to 32-bit pointer. The safe way is to store addresses only in pointer types (or typedefs like uintptr_t)." cwe="758" file0="/workspaces/Unix-V5/usr/sys/ken/malloc.c">
+            <location file="/workspaces/Unix-V5/usr/sys/ken/malloc.c" line="42" column="18"/>
+        </error>
+        <error id="AssignmentIntegerToAddress" severity="portability" msg="Assigning an integer to a pointer is not portable." verbose="Assigning an integer (int/long/etc) to a pointer is not portable across different platforms and compilers. For example in 32-bit Windows and linux they are same width, but in 64-bit Windows and linux they are of different width. In worst case you end up assigning 64-bit integer to 32-bit pointer. The safe way is to store addresses only in pointer types (or typedefs like uintptr_t)." cwe="758" file0="/workspaces/Unix-V5/usr/sys/ken/malloc.c">
+            <location file="/workspaces/Unix-V5/usr/sys/ken/malloc.c" line="53" column="15"/>
+        </error>
+        <error id="AssignmentIntegerToAddress" severity="portability" msg="Assigning an integer to a pointer is not portable." verbose="Assigning an integer (int/long/etc) to a pointer is not portable across different platforms and compilers. For example in 32-bit Windows and linux they are same width, but in 64-bit Windows and linux they are of different width. In worst case you end up assigning 64-bit integer to 32-bit pointer. The safe way is to store addresses only in pointer types (or typedefs like uintptr_t)." cwe="758" file0="/workspaces/Unix-V5/usr/sys/ken/malloc.c">
+            <location file="/workspaces/Unix-V5/usr/sys/ken/malloc.c" line="54" column="15"/>
+        </error>
+        <error id="AssignmentAddressToInteger" severity="portability" msg="Assigning a pointer to an integer is not portable." verbose="Assigning a pointer to an integer (int/long/etc) is not portable across different platforms and compilers. For example in 32-bit Windows and linux they are same width, but in 64-bit Windows and linux they are of different width. In worst case you end up assigning 64-bit address to 32-bit integer. The safe way is to store addresses only in pointer types (or typedefs like uintptr_t)." cwe="758" file0="/workspaces/Unix-V5/usr/sys/ken/malloc.c">
+            <location file="/workspaces/Unix-V5/usr/sys/ken/malloc.c" line="56" column="6"/>
+        </error>
+        <error id="AssignmentIntegerToAddress" severity="portability" msg="Assigning an integer to a pointer is not portable." verbose="Assigning an integer (int/long/etc) to a pointer is not portable across different platforms and compilers. For example in 32-bit Windows and linux they are same width, but in 64-bit Windows and linux they are of different width. In worst case you end up assigning 64-bit integer to 32-bit pointer. The safe way is to store addresses only in pointer types (or typedefs like uintptr_t)." cwe="758" file0="/workspaces/Unix-V5/usr/sys/ken/malloc.c">
+            <location file="/workspaces/Unix-V5/usr/sys/ken/malloc.c" line="57" column="15"/>
+        </error>
+        <error id="AssignmentAddressToInteger" severity="portability" msg="Assigning a pointer to an integer is not portable." verbose="Assigning a pointer to an integer (int/long/etc) is not portable across different platforms and compilers. For example in 32-bit Windows and linux they are same width, but in 64-bit Windows and linux they are of different width. In worst case you end up assigning 64-bit address to 32-bit integer. The safe way is to store addresses only in pointer types (or typedefs like uintptr_t)." cwe="758" file0="/workspaces/Unix-V5/usr/sys/ken/malloc.c">
+            <location file="/workspaces/Unix-V5/usr/sys/ken/malloc.c" line="59" column="6"/>
+        </error>
+        <error id="AssignmentIntegerToAddress" severity="portability" msg="Assigning an integer to a pointer is not portable." verbose="Assigning an integer (int/long/etc) to a pointer is not portable across different platforms and compilers. For example in 32-bit Windows and linux they are same width, but in 64-bit Windows and linux they are of different width. In worst case you end up assigning 64-bit integer to 32-bit pointer. The safe way is to store addresses only in pointer types (or typedefs like uintptr_t)." cwe="758" file0="/workspaces/Unix-V5/usr/sys/ken/malloc.c">
+            <location file="/workspaces/Unix-V5/usr/sys/ken/malloc.c" line="60" column="15"/>
+        </error>
+        <error id="missingReturn" severity="error" msg="Found a exit path from function with non-void return type that has missing return statement" verbose="Found a exit path from function with non-void return type that has missing return statement" cwe="758" file0="/workspaces/Unix-V5/usr/sys/ken/malloc.c">
+            <location file="/workspaces/Unix-V5/usr/sys/ken/malloc.c" line="62" column="0"/>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="/workspaces/Unix-V5/usr/sys/ken/nami.c">
+            <location file="/workspaces/Unix-V5/usr/sys/ken/nami.c" line="113" column="16"/>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="/workspaces/Unix-V5/usr/sys/ken/pipe.c">
+            <location file="/workspaces/Unix-V5/usr/sys/ken/pipe.c" line="65" column="14"/>
+        </error>
+        <error id="missingReturn" severity="error" msg="Found a exit path from function with non-void return type that has missing return statement" verbose="Found a exit path from function with non-void return type that has missing return statement" cwe="758" file0="/workspaces/Unix-V5/usr/sys/ken/prf.c">
+            <location file="/workspaces/Unix-V5/usr/sys/ken/prf.c" line="62" column="0"/>
+        </error>
+        <error id="missingReturn" severity="error" msg="Found a exit path from function with non-void return type that has missing return statement" verbose="Found a exit path from function with non-void return type that has missing return statement" cwe="758" file0="/workspaces/Unix-V5/usr/sys/ken/prf.c">
+            <location file="/workspaces/Unix-V5/usr/sys/ken/prf.c" line="83" column="2"/>
+        </error>
+        <error id="missingReturn" severity="error" msg="Found a exit path from function with non-void return type that has missing return statement" verbose="Found a exit path from function with non-void return type that has missing return statement" cwe="758" file0="/workspaces/Unix-V5/usr/sys/ken/prf.c">
+            <location file="/workspaces/Unix-V5/usr/sys/ken/prf.c" line="101" column="2"/>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="/workspaces/Unix-V5/usr/sys/ken/rdwri.c">
+            <location file="/workspaces/Unix-V5/usr/sys/ken/rdwri.c" line="24" column="13"/>
+        </error>
+        <error id="AssignmentAddressToInteger" severity="portability" msg="Assigning a pointer to an integer is not portable." verbose="Assigning a pointer to an integer (int/long/etc) is not portable across different platforms and compilers. For example in 32-bit Windows and linux they are same width, but in 64-bit Windows and linux they are of different width. In worst case you end up assigning 64-bit address to 32-bit integer. The safe way is to store addresses only in pointer types (or typedefs like uintptr_t)." cwe="758" file0="/workspaces/Unix-V5/usr/sys/ken/sig.c">
+            <location file="/workspaces/Unix-V5/usr/sys/ken/sig.c" line="64" column="16"/>
+        </error>
+        <error id="AssignmentIntegerToAddress" severity="portability" msg="Assigning an integer to a pointer is not portable." verbose="Assigning an integer (int/long/etc) to a pointer is not portable across different platforms and compilers. For example in 32-bit Windows and linux they are same width, but in 64-bit Windows and linux they are of different width. In worst case you end up assigning 64-bit integer to 32-bit pointer. The safe way is to store addresses only in pointer types (or typedefs like uintptr_t)." cwe="758" file0="/workspaces/Unix-V5/usr/sys/ken/sig.c">
+            <location file="/workspaces/Unix-V5/usr/sys/ken/sig.c" line="105" column="13"/>
+        </error>
+        <error id="danglingTemporaryLifetime" severity="error" msg="Using object that is a temporary." verbose="Using object that is a temporary." cwe="562" file0="/workspaces/Unix-V5/usr/sys/ken/sig.c">
+            <location file="/workspaces/Unix-V5/usr/sys/ken/sig.c" line="65" column="3"/>
+            <location file="/workspaces/Unix-V5/usr/sys/ken/sig.c" line="64" column="19" info="Temporary created here."/>
+            <location file="/workspaces/Unix-V5/usr/sys/ken/sig.c" line="64" column="17" info="Address of variable taken here."/>
+        </error>
+        <error id="missingReturn" severity="error" msg="Found a exit path from function with non-void return type that has missing return statement" verbose="Found a exit path from function with non-void return type that has missing return statement" cwe="758" file0="/workspaces/Unix-V5/usr/sys/ken/sig.c">
+            <location file="/workspaces/Unix-V5/usr/sys/ken/sig.c" line="38" column="2"/>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="/workspaces/Unix-V5/usr/sys/ken/slp.c">
+            <location file="/workspaces/Unix-V5/usr/sys/ken/slp.c" line="184" column="13"/>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="/workspaces/Unix-V5/usr/sys/ken/subr.c">
+            <location file="/workspaces/Unix-V5/usr/sys/ken/subr.c" line="48" column="15"/>
+        </error>
+        <error id="AssignmentIntegerToAddress" severity="portability" msg="Assigning an integer to a pointer is not portable." verbose="Assigning an integer (int/long/etc) to a pointer is not portable across different platforms and compilers. For example in 32-bit Windows and linux they are same width, but in 64-bit Windows and linux they are of different width. In worst case you end up assigning 64-bit integer to 32-bit pointer. The safe way is to store addresses only in pointer types (or typedefs like uintptr_t)." cwe="758" file0="/workspaces/Unix-V5/usr/sys/ken/sys1.c">
+            <location file="/workspaces/Unix-V5/usr/sys/ken/sys1.c" line="136" column="16"/>
+        </error>
+        <error id="AssignmentIntegerToAddress" severity="portability" msg="Assigning an integer to a pointer is not portable." verbose="Assigning an integer (int/long/etc) to a pointer is not portable across different platforms and compilers. For example in 32-bit Windows and linux they are same width, but in 64-bit Windows and linux they are of different width. In worst case you end up assigning 64-bit integer to 32-bit pointer. The safe way is to store addresses only in pointer types (or typedefs like uintptr_t)." cwe="758" file0="/workspaces/Unix-V5/usr/sys/ken/sys1.c">
+            <location file="/workspaces/Unix-V5/usr/sys/ken/sys1.c" line="137" column="12"/>
+        </error>
+        <error id="AssignmentIntegerToAddress" severity="portability" msg="Assigning an integer to a pointer is not portable." verbose="Assigning an integer (int/long/etc) to a pointer is not portable across different platforms and compilers. For example in 32-bit Windows and linux they are same width, but in 64-bit Windows and linux they are of different width. In worst case you end up assigning 64-bit integer to 32-bit pointer. The safe way is to store addresses only in pointer types (or typedefs like uintptr_t)." cwe="758" file0="/workspaces/Unix-V5/usr/sys/ken/sys1.c">
+            <location file="/workspaces/Unix-V5/usr/sys/ken/sys1.c" line="221" column="4"/>
+        </error>
+        <error id="AssignmentIntegerToAddress" severity="portability" msg="Assigning an integer to a pointer is not portable." verbose="Assigning an integer (int/long/etc) to a pointer is not portable across different platforms and compilers. For example in 32-bit Windows and linux they are same width, but in 64-bit Windows and linux they are of different width. In worst case you end up assigning 64-bit integer to 32-bit pointer. The safe way is to store addresses only in pointer types (or typedefs like uintptr_t)." cwe="758" file0="/workspaces/Unix-V5/usr/sys/ken/sys1.c">
+            <location file="/workspaces/Unix-V5/usr/sys/ken/sys1.c" line="287" column="5"/>
+        </error>
+        <error id="missingReturn" severity="error" msg="Found a exit path from function with non-void return type that has missing return statement" verbose="Found a exit path from function with non-void return type that has missing return statement" cwe="758" file0="/workspaces/Unix-V5/usr/sys/ken/sys1.c">
+            <location file="/workspaces/Unix-V5/usr/sys/ken/sys1.c" line="192" column="0"/>
+        </error>
+        <error id="missingReturn" severity="error" msg="Found a exit path from function with non-void return type that has missing return statement" verbose="Found a exit path from function with non-void return type that has missing return statement" cwe="758" file0="/workspaces/Unix-V5/usr/sys/ken/sys1.c">
+            <location file="/workspaces/Unix-V5/usr/sys/ken/sys1.c" line="279" column="2"/>
+        </error>
+        <error id="missingReturn" severity="error" msg="Found a exit path from function with non-void return type that has missing return statement" verbose="Found a exit path from function with non-void return type that has missing return statement" cwe="758" file0="/workspaces/Unix-V5/usr/sys/ken/sys1.c">
+            <location file="/workspaces/Unix-V5/usr/sys/ken/sys1.c" line="305" column="25"/>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="/workspaces/Unix-V5/usr/sys/ken/sys2.c">
+            <location file="/workspaces/Unix-V5/usr/sys/ken/sys2.c" line="205" column="13"/>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="/workspaces/Unix-V5/usr/sys/ken/sys3.c">
+            <location file="/workspaces/Unix-V5/usr/sys/ken/sys3.c" line="112" column="13"/>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="/workspaces/Unix-V5/usr/sys/ken/sys4.c">
+            <location file="/workspaces/Unix-V5/usr/sys/ken/sys4.c" line="122" column="13"/>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="/workspaces/Unix-V5/usr/sys/ken/text.c">
+            <location file="/workspaces/Unix-V5/usr/sys/ken/text.c" line="25" column="13"/>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error" file0="/workspaces/Unix-V5/usr/sys/ken/trap.c">
+            <location file="/workspaces/Unix-V5/usr/sys/ken/trap.c" line="118" column="6"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;monitor&apos; is never used." verbose="The function &apos;monitor&apos; is never used." cwe="561">
+            <location file="/workspaces/Unix-V5/usr/source/s4/mon.c" line="1" column="0"/>
+            <symbol>monitor</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;rin&apos; is never used." verbose="The function &apos;rin&apos; is never used." cwe="561">
+            <location file="/workspaces/Unix-V5/usr/source/s4/rin.c" line="1" column="0"/>
+            <symbol>rin</symbol>
+        </error>
+        <error id="unmatchedSuppression" severity="information" msg="Unmatched suppression: missingIncludeSystem" verbose="Unmatched suppression: missingIncludeSystem"/>
+        <error id="missingInclude" severity="information" msg="Cppcheck cannot find all the include files (use --check-config for details)" verbose="Cppcheck cannot find all the include files. Cppcheck can check the code without the include files found. But the results will probably be more accurate if all the include files are found. Please check your project&apos;s include directories and add all of them as include directories for Cppcheck. To see what files Cppcheck cannot find use --check-config."/>
+    </errors>
+</results>

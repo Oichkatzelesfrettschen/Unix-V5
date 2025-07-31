@@ -1,0 +1,83 @@
+# Doxyfile 1.9.8
+
+# Project
+PROJECT_NAME           = "UnixV5_Modernized"
+PROJECT_BRIEF          = "Modernized Research Unix v5 with CMake, Doxygen, and Sphinx for x86_64"
+OUTPUT_DIRECTORY       = @CMAKE_BINARY_DIR@/doxygen_output
+CREATE_SUBDIRS         = YES
+OUTPUT_LANGUAGE        = English
+
+# Source code
+INPUT                  = @CMAKE_SOURCE_DIR@
+RECURSIVE              = YES
+EXCLUDE                = @CMAKE_BINARY_DIR@ \
+                         @CMAKE_SOURCE_DIR@/docs \
+                         @CMAKE_SOURCE_DIR@/.git \
+                         @CMAKE_SOURCE_DIR@/.devcontainer \
+                         @CMAKE_SOURCE_DIR@/v5root.tar.gz
+EXCLUDE_PATTERNS       = */build/* \
+                         */.*_output/* \
+                         *CMakeLists.txt.user*
+
+# Documentation generation
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+EXTRACT_ANON_NSPACES   = YES
+HIDE_UNDOC_MEMBERS     = NO
+HIDE_UNDOC_CLASSES     = NO
+BRIEF_MEMBER_DESC      = YES
+REPEAT_BRIEF           = YES
+ALWAYS_DETAILED_SEC    = NO
+FULL_PATH_NAMES        = YES
+STRIP_FROM_PATH        =
+INTERNAL_DOCS          = YES # For documenting internal structures
+
+# Output formats
+GENERATE_HTML          = YES # Can be NO if only using XML for Sphinx
+HTML_OUTPUT            = html # Relative to OUTPUT_DIRECTORY
+GENERATE_XML           = YES
+XML_OUTPUT             = xml # Relative to OUTPUT_DIRECTORY, for Sphinx (Breathe)
+XML_PROGRAMLISTING     = YES
+
+# Diagrams (Graphviz needed)
+HAVE_DOT               = YES
+DOT_IMAGE_FORMAT       = png
+INTERACTIVE_SVG        = NO # Keep it simple for now
+CALL_GRAPH             = YES
+CALLER_GRAPH           = YES
+# For large projects, these might be too slow/large initially
+# DIRECTORY_GRAPH        = YES
+# INCLUDE_GRAPH          = YES
+# INCLUDED_BY_GRAPH      = YES
+
+# C specific
+OPTIMIZE_OUTPUT_FOR_C  = YES
+JAVADOC_AUTOBRIEF      = YES
+QT_AUTOBRIEF           = NO
+MARKDOWN_SUPPORT       = YES
+
+# Preprocessing
+ENABLE_PREPROCESSING   = YES
+MACRO_EXPANSION        = YES
+EXPAND_ONLY_PREDEF     = NO
+SKIP_FUNCTION_MACROS   = NO
+
+# External linking (if needed later)
+# TAGFILES             =
+
+# Source browsing
+SOURCE_BROWSER         = YES
+INLINE_SOURCES         = NO # Keep separate for cleaner XML for Sphinx
+REFERENCED_BY_RELATION = YES
+REFERENCES_RELATION    = YES
+
+# Dot options
+DOT_PATH               = /usr/bin # Adjust if Graphviz is elsewhere
+MAX_DOT_GRAPH_DEPTH    = 0 # 0 for no limit
+
+# Example settings, can be fine-tuned
+WARN_IF_UNDOCUMENTED   = YES # Good for finding what needs docs
+WARN_NO_PARAMDOC       = YES
+QUIET                  = NO
+WARN_LOGFILE           = doxygen_warnings.log
